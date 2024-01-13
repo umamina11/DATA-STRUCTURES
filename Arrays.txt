@@ -1,0 +1,15 @@
+Arrays 
+
+Defination: Array is a collection of items sorted at a contiguous ( together in a sequence) memory location.
+The idea is to store multiple items of the same type together. This makes it easier to calculate the position of each element by simply adding an offset to a base value.
+
+BASIC termonologies:
+Array index: the elements position or elements are identified by their indexes. 
+            All index values start from 0 
+Array Element: The values in the array that are sorted and can be assessed by the provided index values.
+Array Length: The length is defiend by the items/ elements contained in the array.
+
+SYNTAX
+DATATYPE NAME_OF_ARRAY [Elemnent];
+or
+DATATYPE NAME_OF_ARRAY[SIZE]={ELEMENT 1, ELEMENT 2,..............};
