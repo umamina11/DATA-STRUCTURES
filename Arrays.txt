@@ -13,3 +13,9 @@ SYNTAX
 DATATYPE NAME_OF_ARRAY [Elemnent];
 or
 DATATYPE NAME_OF_ARRAY[SIZE]={ELEMENT 1, ELEMENT 2,..............};
+
+NEED FOR DATA STRUCTURES
+
+To represent the many instances under just in a varibale name.
+Effiecient access to the element
+It allow the fast data retrival 
