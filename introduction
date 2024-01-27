@@ -1,0 +1,31 @@
+What is data Structures?
+A data structure is a storage that is used to store and organize data. 
+It is a way of arranging data on a computer so that it can be accessed 
+and updated efficiently.
+Data structures organises and stores. 
+Data structure has many different uses in our daily life. There are many 
+different data structures that are used to solve different mathematical 
+and logical problems. By using data structure, one can organize and 
+process a very large amount of data in a relatively short period. Let’s 
+look at different data structures that are used in different situations. 
+![Alt text](ClassificationofDataStructure-660x347.jpg)
+
+Each data structruce has strengths and weaknesses
+Type of data structures
+- Arrays
+- Linked list
+- Stack 
+- Queue
+- Tree
+- Graph
+
+What is an algorithm?
+An algorithm is a procedure used for solving a problem or performing a computation. Algorithms act as an exact list of instructions that conduct specified actions step by step in either hardware- or software-based routines.
+
+Algorithms are widely used throughout all areas of IT. In mathematics, computer programming and computer science, an algorithm usually refers to a small procedure that solves a recurrent problem. Algorithms are also used as specifications for performing data processing and play a major role in automated systems.
+
+An algorithm could be used for sorting sets of numbers or for more complicated tasks, such as recommending user content on social media. Algorithms typically start with initial input and instructions that describe a specific computation. When the computation is executed, the process produces an output.
+
+Algorthim is not same as the implementation. Algorithms describes the 
+steps that a developer need to perform in order to get the result and 
+implementation is the line of codes that the developer writes to develop or solve the problem.
