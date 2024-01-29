@@ -6,8 +6,7 @@ import java.io.*;
 
 public class sorting {
 
-    static void printArr(int arr[],
-            int n) {
+    static void printArr(int arr[], int n) {
         for (int i = 0; i < n; i++)
             System.out.print(arr[i] + " ");
     }
