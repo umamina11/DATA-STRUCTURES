@@ -19,3 +19,17 @@ NEED FOR DATA STRUCTURES
 To represent the many instances under just in a varibale name.
 Effiecient access to the element
 It allow the fast data retrival 
+
+****BIG-O Notation*****
+
+the running time of the program of code depends on differnt factors 
+developers need more a more objective measure other than the running time for working effeciently, so the 
+deveopler took number of steps involved in running a algorithm irrespective of 
+of harware or software used, called time complexity 
+These are of two types one is the time complexity which involves the number steps involved to run an algorithm and 
+memory complexity which is the memeory used to run an algorithm. 
+But as for now memory is not such an big issues as it is available cheaply to everyone
+without any hasel so, time complexity is given more priority 
+
+
+
