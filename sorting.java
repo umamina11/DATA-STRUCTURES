@@ -1,6 +1,9 @@
 // Given an array A[] that consists of 0s,1s, and 2s. the task is to wrtie a function that sorts the given array.
 // the functions should put all the  0s first and then 1s and 2s at the last.
 
+// TIME COMPLEXITY:  O(n)
+// SPACE COMPLEXITY: O(1)
+
 import java.util.Arrays;
 import java.io.*;
 
