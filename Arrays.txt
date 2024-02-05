@@ -1,6 +1,6 @@
 Arrays 
 
-Defination: Array is a collection of items sorted at a contiguous ( together in a sequence) memory location.
+Defination: Array is a collection of items sorted at a contiguous block ( together in a sequence) memory location.
 The idea is to store multiple items of the same type together. This makes it easier to calculate the position of each element by simply adding an offset to a base value.
 
 BASIC termonologies:
@@ -13,6 +13,28 @@ SYNTAX
 DATATYPE NAME_OF_ARRAY [Elemnent];
 or
 DATATYPE NAME_OF_ARRAY[SIZE]={ELEMENT 1, ELEMENT 2,..............};
+
+The arrays cant be resized, becuase when a developer defines the array and allocate the number of elements
+the JVM complier will allot a specific slot of memery to the array and when we resize the array 
+it is not sure that the memory allocated will be continued or have a gap in previous memory space and the revised memory.
+
+Every element in the array occupies same amount of space in memeory
+ for exapmple: if there is a int array and in java the integer takes 4 bytes then each 
+ element in the array will take 4 bytes of space, for instance, a array contain 
+ 3 integers then the memeory space used by the array will be 12 bytes.
+
+If array contain strings ( objects), when the array conatain strings it contain the reference to those objects which 
+have the same size irrespective of the length of th estring or object.
+If an array starts at memory address x, and the size of each element in the array is
+y, the memory address of the ith element will be calulated using the expression. x+i*y
+
+If we know the index of an array then the time to retrieve the element will be the
+same , no matter where that element is placed in the array.
+
+
+
+
+
 
 NEED FOR DATA STRUCTURES
 
@@ -33,6 +55,22 @@ without any hasel so, time complexity is given more priority
 
 The big-O-notation is a way of expressing the complexity to related to the number of items an algorithm has to deal with.
 c:\Users\umami\OneDrive\Pictures\Screenshots\Screenshot (422).png
+
+
+
+**Retrieve an element from an array**
+- Multiply the size of the element by its index.
+- Get the start adress of the array
+- Add the start address to the result of the multiplication.
+
+x+i*y: use this formula for calculation of the memory 
+
+array has a constant time complexity that is O(n) and the
+Space complexity of the array will be O(1).
+ which shows that the array have the best case time complexity and the space complexity 
+ 
+
+
 
 
 
