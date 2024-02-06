@@ -56,6 +56,12 @@ without any hasel so, time complexity is given more priority
 The big-O-notation is a way of expressing the complexity to related to the number of items an algorithm has to deal with.
 c:\Users\umami\OneDrive\Pictures\Screenshots\Screenshot (422).png
 
+For the big-o-notation we always consider the worst case that would be the seleted element is present at the last index 
+and that why we say the number of elments effect the complexities 
+as the number of iterations is proportional to number of steps
+
+When the developer know the index value then the complexity will be O(1) and on 
+reterervial when developer don't know the index then the complexity will be O(n).
 
 
 **Retrieve an element from an array**
@@ -68,8 +74,15 @@ x+i*y: use this formula for calculation of the memory
 array has a constant time complexity that is O(n) and the
 Space complexity of the array will be O(1).
  which shows that the array have the best case time complexity and the space complexity 
- 
 
+*** Time complexities for differnt operations in array ***
+Retrieve with index- O(1)- constant time
+Retrieve without index- O(n)-linear time
+add an element to a full array- O(n)
+add an element to the end of an array (has space)- O(1)
+insert or update an element at a specific index- O(1)
+delete an element by setting it to null - O(1)
+delete an element by shifting element - O(n)
 
 
 
