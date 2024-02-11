@@ -32,4 +32,120 @@ Disadvantages of Bubble Sort:
 Bubble sort has a time complexity of O(N2) which makes it very slow for large data sets.
 Bubble sort is a comparison-based sorting algorithm, which means that it requires a comparison operator to determine the relative order of elements in the input data set. It can limit the efficiency of the algorithm in certain cases.
 
+the sorting of the array either starts with the index 0 or maximum index the array holds.
+By default and mostly the sorting starts with index 0.
+as sorting start the element at the index 0 and at index 1 are compared and then placed accordingly. and then then elemnts at index 1 and index 2 if swaping required then swap, similary all the index will increment perfroming the swapping required. this is one cycle in sorting. 
 
+similary the cyle goes on untill the whole array get sorted  for instance
+ array a[]= [12, 4, 6, 10, 50, 22, 1]
+
+ first cycle 
+ comparing index 0 and 1
+    [4, 12, 6, 10, 50, 22, 1]
+ comapring index 1 and 2
+    [4, 6, 12, 10, 50, 22, 1]
+ comapring index 2 and 3
+    [4, 6, 10, 12, 50, 22, 1]
+ comparing index 3 and 4
+    [4, 6, 10, 12, 50, 22, 1]
+ comparing index 4 and 5
+    [4, 6, 10, 12, 22, 50, 1]
+ comparing index 5 and 6
+    [4, 6, 10, 12, 22, 1, 55]
+
+ here we get the maximum number at the end of the array at last index
+
+ one iteration or cycle complete now the second cycle 
+cycle 2
+  [4, 6, 10, 12, 22, 1, 55]
+
+comapring index 0 and 1
+    [4, 6, 10, 12, 22, 1, 55]
+comapring index 1 and 2
+    [4, 6, 10, 12, 22, 1, 55]
+comapring index 2 and 3
+    [4, 6, 10, 12, 22, 1, 55]
+comparing index 3 and 4 
+    [4, 6, 10, 12, 22, 1, 55]
+comparing index 4 and 5
+    [4, 6, 10, 12, 1, 22, 55]
+comapring index 5 and 6
+    [4, 6, 10, 12, 1, 22, 55]
+
+ another cycle complete where we get the two largest number at the end of the cycle 
+
+cycel 3
+ for the array  [4, 6, 10, 12, 1, 22, 55]
+comparing index 0 and 1
+  [4, 6, 10, 12, 1, 22, 55]
+comparing index 1 and 2
+ [4, 6, 10, 12, 1, 22, 55]
+comparing index 2 and 3
+ [4, 6, 10, 12, 1, 22, 55]
+comparing index 3 and 4
+ [4, 6, 10, 1, 12, 22, 55]
+comparing index 4 and 5
+ [4, 6, 10, 1, 12, 22, 55]
+comparing index 5 and 6
+  [4, 6, 10, 1, 12, 22, 55]
+
+ here we can see that the array has taken a good sorted shape now few more iteration to make the comaprsion and make the final placements
+   
+cycle  4
+
+ [4, 6, 10, 1, 12, 22, 55]
+comparing index 0 and 1
+  [4, 6, 10, 1, 12, 22, 55]
+comapring index 1 and 2
+   [4, 6, 10, 1, 12, 22, 55]
+comparing index 2 and 3 
+    [4, 6, 1, 10, 12, 22, 55] 
+comparing index 3 and 4
+    [4, 6, 1, 10, 12, 22, 55] 
+comparing index 4 and 5
+   [4, 6, 1, 10, 12, 22, 55] 
+comaring index 5 and 6
+   [4, 6, 1, 10, 12, 22, 55] 
+
+cycle 5
+
+   [4, 6, 1, 10, 12, 22, 55] 
+comparing index 0 and 1
+   [4, 6, 1, 10, 12, 22, 55] 
+comparing index 1 and 2
+   [4, 1, 6, 10, 12, 22, 55] 
+comparing index 2 and 3
+  [4, 1, 6, 10, 12, 22, 55] 
+comparing index 3 and 4
+  [4, 1, 6, 10, 12, 22, 55] 
+comapring index 4 and 5
+  [4, 1, 6, 10, 12, 22, 55] 
+comparing index 5 and 6
+  [4, 1, 6, 10, 12, 22, 55] 
+
+cycle 6 
+  [4, 1, 6, 10, 12, 22, 55] 
+comparing index 0 and 1
+  [1, 4, 6, 10, 12, 22, 55] 
+
+  " Here our array is sorted still the loop will go till end comapring the elements" 
+    [1, 4, 6, 10, 12, 22, 55] 
+
+comparing index 1 and 2
+    [1, 4, 6, 10, 12, 22, 55] 
+comparing index 2 and 3
+    [1, 4, 6, 10, 12, 22, 55] 
+comparing index 3 and 4
+    [1, 4, 6, 10, 12, 22, 55] 
+comparing index 4 and 5
+    [1, 4, 6, 10, 12, 22, 55] 
+comparing index 5 and 6 
+    [1, 4, 6, 10, 12, 22, 55] 
+    
+
+    This is the complete sorted array 
+    "    [1, 4, 6, 10, 12, 22, 55]  "
+    we got this array after running the cycle 6 times.
+    
+
+    
