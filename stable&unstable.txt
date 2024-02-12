@@ -1,0 +1,24 @@
+Stable Vs Unstable sortings
+
+This concept comes into play when array have duplicate values
+for example
+[5, 9, 3, 9, 8, 4]
+This will create a issue that where these duplicates items will be placed 
+
+if sort is unstbal then the relatives of dubolicate items will not be preserved
+
+The 9 are sorted but the relative ordering is not preserved and they will swap the values 
+
+
+Stable sort are the the relative ordering of the duplicate otems have been preserved as their idexs will be as per 
+the original index the elment which comes at index first will be placed at first and then the second duplictae item.
+
+lets talk about the bubble sort is it a stable sort or unstable sort
+in bubble sort the algorithm the swaping of elements will define the stablitiy
+of the sort as it the swaping is done based on greater than and equal to or equal then or greater than
+
+Greater then equal then we need to perform the swap that will flip the 
+relative index values of the duplicate elements and gets a unstable sort.
+
+
+

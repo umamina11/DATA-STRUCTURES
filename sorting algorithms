@@ -93,19 +93,19 @@ comparing index 5 and 6
    
 cycle  4
 
- [4, 6, 10, 1, 12, 22, 55]
+    [4, 6, 10, 1, 12, 22, 55]
 comparing index 0 and 1
-  [4, 6, 10, 1, 12, 22, 55]
+    [4, 6, 10, 1, 12, 22, 55]
 comapring index 1 and 2
-   [4, 6, 10, 1, 12, 22, 55]
+    [4, 6, 10, 1, 12, 22, 55]
 comparing index 2 and 3 
     [4, 6, 1, 10, 12, 22, 55] 
 comparing index 3 and 4
     [4, 6, 1, 10, 12, 22, 55] 
 comparing index 4 and 5
-   [4, 6, 1, 10, 12, 22, 55] 
+    [4, 6, 1, 10, 12, 22, 55] 
 comaring index 5 and 6
-   [4, 6, 1, 10, 12, 22, 55] 
+    [4, 6, 1, 10, 12, 22, 55] 
 
 cycle 5
 
@@ -146,6 +146,16 @@ comparing index 5 and 6
     This is the complete sorted array 
     "    [1, 4, 6, 10, 12, 22, 55]  "
     we got this array after running the cycle 6 times.
-    
+
+bubble sort is a inplace algorithm 
+no need of any new array 
+
+time complexity : O(n^2) - quadratic
+
+It will take 100 steps to sort 10 items, 10,000 steps to sort 100 items
+and so on...
+
+algorithm degrades quickly
+
 
     
