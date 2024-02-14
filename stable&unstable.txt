@@ -1,4 +1,4 @@
-Stable Vs Unstable sortings
+Stable Vs Unstable sorts
 
 This concept comes into play when array have duplicate values
 for example

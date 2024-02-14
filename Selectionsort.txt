@@ -1,0 +1,73 @@
+2nd Sorting algorithm "SELECTION SORT"
+
+this algorithm divides the array in sorted and unsorted participation, we travese the array and 
+look at the largest element and then swap it with last element.
+Selection sort is a simple and efficient sorting algorithm that works by repeatedly selecting the smallest (or largest) element from the unsorted portion of the list and moving it to the sorted portion of the list. 
+
+The algorithm repeatedly selects the smallest (or largest) element from the unsorted portion of the list and swaps it with the first element of the unsorted part. This process is repeated for the remaining unsorted portion until the entire list is sorted. 
+instance
+
+array =[ 64 , 25 , 12 , 22 , 11 ]
+index  element
+0       64
+1       25
+2       12
+3       22
+4       11
+
+1st travesal 
+comapre index 0 and 1 
+index 0 element is greater than index 1 value 
+ignore compare index 0 with index 2  value
+ignore compare index 0 with index 3  value
+ignore compare index 0 with index 4 value 
+no one is greater than the element at index 0 so it will get swap with 
+the last index element that is 11 
+new array 
+array=[ 11 , 25 , 12 , 22 , 64 ]
+
+2nd traversal 
+compare index 0 element with index 1 element
+in this index 1 element is larger than element on index 0
+it take index 1 and then compare it with index 2 values
+compare it and not greater than index 2 value 
+ignore and now compare index 1 and index 3 
+ignore and now compare index 1 and 4, 
+4th index value is gerater than index 1 value so take index 3 value and swap 
+it with index value 1 
+
+now the updated array will be 
+array=[ 11 , 22 , 12 , 25 , 64 ]
+
+3rd traversal 
+[ 11 , 22 , 12 , 25 , 64 ]
+
+comapre the index 0 value with the idnex 1 value its sorted 
+now compare index value 1 with index value 2 no cpmaprision 
+ignore 
+comapre the idnex value 1 with index value 3 
+index 3 elemnt value is larger so come back to index 2 
+And perfrom the swaping among index 1 and index 2 elements
+ 
+updated array will be 
+[ 11 , 12 , 22 , 25 , 65 ]
+
+here the developer gets the sorted array for using the selection sorted
+
+
+
+Complexity Analysis of Selection Sort
+Time Complexity: The time complexity of Selection Sort is O(N2) as there are two nested loops:
+
+One loop to select an element of Array one by one = O(N)
+Another loop to compare that element with every other Array element = O(N)
+Therefore overall complexity = O(N) * O(N) = O(N*N) = O(N2)
+Auxiliary Space: O(1) as the only extra memory used is for temporary variables while swapping two values in Array. The selection sort never makes more than O(N) swaps and can be useful when memory writing is costly. 
+
+Advantages of Selection Sort Algorithm
+Simple and easy to understand.
+Works well with small datasets.
+Disadvantages of the Selection Sort Algorithm
+Selection sort has a time complexity of O(n^2) in the worst and average case.
+Does not work well on large datasets.
+Does not preserve the relative order of items with equal keys which means it is not stable.
