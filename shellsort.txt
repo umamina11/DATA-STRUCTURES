@@ -1,0 +1,7 @@
+Shell Sort:
+
+It is a variation of insertion Sort
+insertion sort chooses which element to insert using a gap of 1
+Shell short starts out using a larger gap value 
+AS the algorithm runs, the gap is reduced 
+goal is to reduce the amount of shifting required
