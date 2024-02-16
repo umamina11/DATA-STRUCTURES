@@ -11,13 +11,12 @@ element is smaller than its predecessor, compare it to the elements
 before. Move the greater elements one position up to make space for 
 the swapped element.
 
-working 
+Working 
 
-firstunsortedindex=1- this is the first index of the unsorted partition
+Firstunsortedindex=1- this is the first index of the unsorted partition
 i=0-index used to traverse the sorted partition from right to left
 newElement = element at index 1 - the vlue we want to insert into the 
 sorted partition- array[firstunsortedindex]
-
 
 lets take an unsorted array
 
@@ -33,15 +32,55 @@ now next the pointer goes to compare the element at index 1 and at index 2
 
 on comapring the index values at 1 and 2 index 1 is smaller than index 2 value
 so no change 
- now index 2 and index 3 values will be compared
+now index 2 and index 3 values will be compared
 
- [-12 , 34, 67, 3, -1, 5, 100, 98]
+[-12 , 34, 67, 3, -1, 5, 100, 98]
 
- here index 3 value is smaller than index 2 value so index 3 value will be kept at 
- some imaginary memory and from the right side sorted array it will get comapre and 
- the swapping take place first the 67 will comes at index 3 and then it will get comapred with 
- index 1 where again 34 is greater so it will ve to index 2 and then comaprision will done 
- between the 0 index and that at imaginary index here -12 is smaller so it will get its
- best palce that is at index 1
- the updated array will be like
- [-12, 3, 34, 67, -1, 5, 100, 98 ]
+Here index 3 value is smaller than index 2 value so index 3 value will be kept at 
+some imaginary memory and from the right side sorted array it will get comapre and 
+the swapping take place first the 67 will comes at index 3 and then it will get comapred with 
+index 1 where again 34 is greater so it will ve to index 2 and then comaprision will done 
+between the 0 index and that at imaginary index here -12 is smaller so it will get its
+best palce that is at index 1
+The updated array will be like
+
+[ -12 , 3 , 34 , 67 , -1 , 5 , 100 , 98 ]
+
+Now again the algorithm will go to check the index 3 and comapre it will index 4
+and finds that the value at index 4 is less than the value at index 3 so again 
+it will take imaginary memory and start comapring backwards on index 2,1,0 
+and finds that the value at index 1 is greater than -1 and smaller than -12 so it 
+will take the swap the value with the position and all elemnts after index 1 will move 
+a index ahead
+The updated array will be 
+
+[-12 , -1 , 3 , 34 , 67 , 5 , 100 , 98 ] 
+
+Till now we had sorted array upto index 5 now the algorithm takes the index 5 element
+and then compare it with index 4 and and finds that the value at index 4 value is larger 
+than that so it will check for the other index values at the right and 
+finds that the value at index 3 is larger and index 2 is smaller so the index 3 
+is perfext place for it so it will get inserted in that place and move or shift the rest to 
+the right.
+The updated partially sorted array will be 
+
+[ -12 , -1 , 3 , 5 , 34 , 67 , 100 , 98 ]
+
+We can see that half of the array is sorted and now the algorithm will check for the 
+index 6 and make the comparisions with the adjacent index values i.e. 5 and 7
+and finds that the index 5 is smaller and index 7 is also smaller so , it will swap its values with the larger number among those and the 
+updated array will be 
+
+[ -12 , -1 , 3 , 5 , 34 , 67 , 98 , 100 ]
+
+This is our sorted array 
+Here the algorithms picks a value compare it and insert it at the suitable 
+index 
+
+This is an in-place algorithm, as no need to create extra memeory on permanent base
+O(n^2)- Time complexity or say quadratic 
+
+It will take 100 steps to sort 10 items, 10,000 steps to sort 100 items and so on.....
+It is an stable algorithm picking of elements is from left to right so it will not swap the 
+similar 
+
