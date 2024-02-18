@@ -5,3 +5,57 @@ insertion sort chooses which element to insert using a gap of 1
 Shell short starts out using a larger gap value 
 AS the algorithm runs, the gap is reduced 
 goal is to reduce the amount of shifting required
+As the algorithm progresses, the gap is reduced 
+the last gap value is always 1
+a gap value of 1 is equivalent to insertion sort
+so the algorithm does some preliminary work (using the gap values greater yhan 1),
+and then becomes the insertion sort
+By the time we get to insertion sort the arry has been partially sorted, so there's less shifting
+required
+
+
+Shell sort is mainly a variation of Insertion Sort. In insertion sort,
+we move elements only one position ahead.
+When an element has to be moved far ahead, many movements 
+are involved. The idea of ShellSort is to allow the exchange of far items.
+In Shell sort, we make the array h-sorted for a large value of h. We keep
+reducing the value of h until it becomes 1. An array is said to be 
+h-sorted if all sublists of every h’th element are sorted.
+
+Time Complexity: Time complexity of the above implementation of Shell sort is O(n2). In the above implementation, the gap is reduced by half in every iteration. There are many other ways to reduce gaps which leads to better time complexity. See this for more details.
+
+Worst Case Complexity
+The worst-case complexity for shell sort is  O(n2)
+Best Case Complexity
+When the given array list is already sorted the total count of comparisons of each interval is equal to the size of the given array.
+So best case complexity is Ω(n log(n))
+Average Case Complexity
+
+The shell sort Average Case Complexity depends on the interval selected by the programmer. 
+θ(n log(n)2).
+
+THE Average Case Complexity: O(n*log n)~O(n1.25)
+Space Complexity
+The space complexity of the shell sort is O(1).
+
+
+Knuth Sequence 
+K               Gap (interval)
+1               1
+2               4
+3               13
+4               40
+5               121
+
+Here the gap is calculated using the formula (3^k-1)/2
+We set k based on the length of the array
+We want the gap to be as close as possible to the length of the array
+we want to sort, without being greater than the length
+
+Lets take an array 
+20, 35, -15, 7, 55, 1, -22
+we will base our gap on the array's length. We will initialize the gap(or interval)
+to array.length/2
+on each iterations, we will divide the gap value by 2 to get the next gap value
+For our array, the gap will be initialize to 3
+on the next iteration, it will be 1- insertion sort
