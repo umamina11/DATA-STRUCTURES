@@ -59,3 +59,55 @@ to array.length/2
 on each iterations, we will divide the gap value by 2 to get the next gap value
 For our array, the gap will be initialize to 3
 on the next iteration, it will be 1- insertion sort
+
+20, 35, -15, 7, 55, 1, -22
+
+i = gap = 3 
+j = i = 3
+newelement = intarr[i] = 7
+compare intarr[ j - gap ] with newelement
+as clearly observed that 7 is smaller than 20 so 
+they will swap the values 
+updated array will be 
+
+7, 35, -15, 20, 55, 1, -22
+
+i = gap = 3
+j = j - gap = 0
+newelement = intarr[i] = 7
+
+
+next step 
+i = 4
+j = i = 4
+newelement = intarr[i] = 55
+
+compare int aa[j-gap] with newelement
+
+as 55 > 35 so no change the array will remain same 
+
+i = 5
+j = i = 5
+newelement = intarr[i] = 1
+compare intarr[j - gap] wiht new element
+no change as -15< 1 
+
+now i = 6
+j = i = 6
+newelement =  intarr[i]=-22
+compare int arr[j-gap] with new element
+ updated array will be 
+ -22 , 35 , -15 , 7 , 55 , 1 , 20
+
+
+ we have compeleted the iteration with gap =3 
+ now the array is somewhat sortedwe have moved -22 
+ to the front of the array. we have also moved 20 closer to 
+ its sorted position, 
+  now we update the gap (gap/1) the gap will become 1, we are switiching to insertion sort
+
+  Shell sort is an in-place algorithm
+  difficult to nail down the time complexity because its will dependson the gap
+  worst case: O(n^2), but it can perfrom much better than this
+  doesnt require as much as shifting as insertion sort, so it usually perfroms better 
+  this is an unstbale algorithm
