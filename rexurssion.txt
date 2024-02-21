@@ -1,0 +1,15 @@
+Recusrion is calling itself 
+example 
+factorial of any number
+4!= 4*3*2*1
+Exception 0 whose factorial is 1
+
+the algorithm for finding factorial
+step 1: If num is equal to 0, then the result will be 1 and stop this is the result
+Step 2: set multipler to 1
+step 3: set factorial to 1
+step 4: while multipler is not equal to num, do step 5 and 6
+step 5: multiply factorial by multipler and assign the result to factorial 
+Step 6: add 1 to multipler
+step 7: stop the result is the factorial
+
