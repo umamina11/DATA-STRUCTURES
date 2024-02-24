@@ -1,0 +1,29 @@
+It is a divide and conquer algorithm becuase it involves splitting the array 
+that need to be sorted into bunch of smaller array
+Usually implemented using recursion method
+It invloves two major phases
+- splitting
+- merging
+splitting phase leads to faster, sorting during the merging phase
+perfrom the sorting during merging pahse and prepartaion is done at splitting phase
+Splitting is logical, we dont create new arrays
+
+SPLITTING PHASE 
+start with the unsorted array and divide them into the two parts which are unsorted
+the first array is the left array and the second array is the right array 
+split the left and right arrays into two arrays each 
+and this process of splitting goes on until each array have one element in it.
+
+IF the number of elements are odd in array then it depend on implmenetaion and put elements in left and right
+arrays 
+
+The last array after complete sepration we have sorted array by default as it contain one element only.
+
+MERGING PHASE
+
+Merge every left/rught pari of siblings array into sorted array.
+after the first merge, we will have to bunch of 2-element aorted arrays
+then merge those sorted array (Left/Right Siblings) to end up with a bunch 
+of 4 element sorted array
+Repeat until we get a single sorted array
+Not in-place, use temporary arrays.
