@@ -1,0 +1,107 @@
+QUICK SORT 
+QuickSort is a sorting algorithm based on the Divide and Conquer 
+algorithm that picks an element as a pivot and partitions the given array around the picked pivot by placing the pivot 
+in its correct position in the sorted array.
+
+Tt is a divide and conquer algorithm simialr to merge sort 
+Recursive algorithm
+it uses a pivot element to partition the array in two parts
+elements<pivot to its left
+elements> pivot is to its rightpivot will then be in its correct position
+which is sorted 
+these two are the partioning step 
+after the partioning around the pivot the two arrays are sorted it is not 
+compulsory as at the left all the small element from the pivot and are not sorted and same
+goes for the right side array.
+so the is now is repeated for the individual left and the right arrays
+eventually, every element has been the pivot, so every element will be in its correct sorted position
+as with merge sort, we will end up partitioning the array into a series
+of 1-element arrays
+This is and in-place algorithm that eans we dont need any other temporary array like 
+merge sort
+
+
+WORKING
+
+lets take the array
+
+20, 35, -15, 7, 55, 1, -22
+
+pivot will be the first element in the array(or subarray)
+
+start = 0; i = start
+end = 7; j = end
+pivot = 20 (array[start])
+
+
+we start with (--j) and go from the right to left, looking for the first 
+elelment that's less than the pivot element 
+
+-22 is less than the pivot element, so we will assign it to postion i, which is 0
+
+j = 6
+
+
+now this time we switch to ideawe start with the (i++) and go 
+from left to right, looking for the first element that's greater than the pivot 
+
+35 is greater than the pivot, so we assign it to position j, which is 6
+
+i = 1
+
+this time we go from left to right 
+and look for the element and assign it to position j
+
+till now we have not lost any data, because we know we have already moved 
+whatever was at positon 6
+
+by althering between going from right to left and left to right , we can 
+be sure we dont loose any values in this movement from left to right in order to 
+find the pivot element
+
+
+now we check whether the values of i and j have crossed each other 
+if i<j, they haven't, so we switch back to j and look for the first element
+that's less than the pivot
+ 
+ i = 1
+ j = 6
+
+ we check the element at (--j) which is position 5.
+ 1 is less than the pivot element so we assign it to the position i
+
+ i = 1
+ j = 5
+
+ notice once agai that we have not lost any data beacuse we have already moved to 35
+ from the position 1
+
+ now we will switch to i and look for the first element greater than the pivot 
+
+ this will take us to the way to 55
+
+ At this point we assign 55 to the position j, which is 5
+ once again, no data is lost, we already moved to the value 1 from position 5
+
+ at this point i=4 and j=5
+ so they have not crosed each other 
+
+ we switch to j and look for the first element that's less than the pivot
+ we find it at the positon 3, but j has now crossed i. so we don't do an
+anything. the code stops
+
+at this point the value of i will be the sorted position for the pivot value
+(20). so we sassign 20 to position 4
+
+notice that everything to the left of 20 is smaller than 20 and 
+everything to the right of 20 is larger than 20
+now we repeat this process for the left partition and the right partition
+we do this until the entire array is sorted
+
+
+
+It is an in-place algorithm 
+time complexity: O(nlogn)- base 2 we are repeatedly partitioning the array into two halves
+IT is an unstable array
+
+chocie of pivot can have the effect on time complexity 
