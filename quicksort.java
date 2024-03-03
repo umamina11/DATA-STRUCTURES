@@ -15,7 +15,7 @@ public class quicksort {
         if (end - start < 2) {
             return;
         }
-
+        // recursive call
         int pivotIndex = partition(input, start, end);
         quickSort(input, start, pivotIndex);
         for (int i = 0; i < input.length; i++) {
