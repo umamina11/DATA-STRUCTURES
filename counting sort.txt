@@ -38,4 +38,28 @@ when i=3
 when i=4
 0,2,0,0,1,0,0,1,1,0
 when i=5
-0,2,0,0,2,0,0,2
+0, 2, 0, 0, 2, 0,0,2
+when i= 6
+0,2,0,0,1,0,1,2,1,0
+when i=7
+0,2,0,1,1,0,1,2,1,1
+when i= 8
+0,2,0,1,1,0,1,2,1,1
+when i=9
+0,2,1,1,1,0,1,2,1,1
+
+now we will write back to the original input array
+0, 2, 1, 1, 1, 0, 1, 2, 1, 1
+
+2, 2, 3, 4, ,5 , 7, 8, 8, 9, 10
+
+
+we traveerse th counting aarray so here we have 0 ones and then 2 twos and so on.....
+it is not an inplace algorithm as we have seen as we have to create a countintg arranga nd that depeand of range of values
+which have similar lenght will equal to number of elements 
+as the range depends on the integrs as for example if the array has values equals to 100, 10000 and the number of elements are then then 
+setting the range to 100 or 1000 is not effective 
+O(n) can achive as it make assumptions abou tthe data we'r sorting  
+if the developer wants to be a stable, we have to do some extra steps
+
+
