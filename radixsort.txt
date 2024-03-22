@@ -1,0 +1,62 @@
+Radix sort
+Radix Sort is a linear sorting algorithm that sorts elements by 
+processing them digit by digit. It is an efficient 
+sorting algorithm for integers or strings with fixed-size keys. 
+
+Make assumptions about the data 
+data must have same radix and width 
+radis is number of unique digits and elements
+like for alphabest we have 26 alphbets whioch have theri unique identification 
+similary for decime we have 10 unique identification 
+width is the length 
+eg 
+hello = 5 width
+10= 2 width
+
+becuase of this, data must be integers or strings 
+sort based on each individual digits or letter positions
+start at the right most position 
+must use a stable sort algorithm
+we have to use stable sort algorithm 
+The key idea behind Radix Sort is to exploit the concept of place value. 
+It assumes that sorting numbers digit by digit will eventually result in a
+ fully sorted list. Radix Sort can be performed using different 
+ variations, such as Least Significant Digit (LSD) Radix Sort or Most
+  Significant Digit (MSD) Radix Sort.
+
+WORKING:
+here take a array
+4725, 4586, 1330, 8792, 1594, 5729
+
+
+now first we will sort the array based on 1's position (or the rightmost digit)
+
+1330, 8792, 1594, 4725, 4586, 5729
+
+now we will look at the second element which is based on the 10's posiotn  and it must 
+be a stable sort we will notice that a pair od duplicate digits 
+ 
+4725, 5729, 1330, 4586, 8792, 1594 
+
+now we will sort the array based on the 100's position digits and must be stable sort
+
+1330, 4586, 1594, 4725, 5729, 8792
+
+now we will sort array based on the 1000's positon digit and must be a stable sort
+
+1330, 1594, 4586, 4725, 5729, 8792
+
+in this we observe that satble sort is required in order to perform the radix sort and that will
+allow proper sorting and key of the radix sort algorithm
+
+------------------
+couting sort is often used as the sort algorithm for radix sort ( must be a stable counting sort)
+
+time complexity of this algorithm is O(n):       as here this algorithm makes assumptions about the 
+data that we are sorting before hand
+
+even so, if often runs slower than O(nlogn) algorithms becuase of the overhead involved (we hav to isolate each individual digit at each time)
+
+it is an in-place algorithm depends on which sort algorithm we used 
+
+it is a stable algorithm for as it is the basic key of this algorthim.

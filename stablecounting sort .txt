@@ -1,0 +1,85 @@
+STABLE COUNTING SORT 
+
+Counting sort is a linear non-comparison-based sorting algorithm that 
+works great for a specific range of values. It counts the number of 
+occurrences of each distinct element in an array and uses that information 
+to determine the sorted order. The count is stored in an auxiliary array 
+and the sorting is done by mapping the count as an index of the auxiliary 
+array.
+
+- required extra steps need to done to make the radix sort stable using the counting sort 
+
+- can calculate where values should be written back to the original array 
+
+- writing the values into the array in backwards order esnures stability 
+
+in the radix sort we worked on the array 
+1330, 8792, 1594, 4725, 4586, 5729
+
+we will sort this array based on the 10's position- must be a stable sort
+
+1594 must remains after 8792
+5729 must remian after 4725
+
+we do the counting as we didi before and we will end up counting array below
+0,0,2,1,0,0,0,0,1,2
+
+we are oging to create a temporay array that matches the length of the array we are sorting 
+here we will have 6 length 
+
+we can use the counts to figure out which range of indices in the temporary array 
+will be occupied by each value. for example we can figure out the two values with '2'
+in the 10s position will occupy indices 0 and 1 in the temporary 
+array. the value wiht '3' in the 10's positon will occupy the index 2
+the value at the 8 in the 10's positon will occupy index 3. the values with 9 in the 10's position will 
+occupy indices 4 and 5
+ 
+
+ after the first pass, we adjust the counts, instead of the number of values that have a specific 10's value
+ we want to store how many values have a specific 10's value or less
+ for example we want to store the 3 at index 3, becuase 3 values have a 10's value of 3 or less
+ we can calculate each adjusted count by adding up the counts up to and including the 10's value
+
+
+ 1330, 8792, 1594, 4725, 4586, 5729
+ 0, 0, 2, 3, 3, 3, 3, 3, 4, 6
+
+we can use the adjusted counts to wrtie out the values in the correct order and preerve the realtive positioing of values that
+have duplicate 10's values
+
+here is the code snippet :
+int [] tmp=new int[n]
+for (int k=n-1;k>=0;k--){
+    tmp[--countarry[getDigit(position,input[k],radix)]]= input[k];
+    
+}
+
+n= length of the inpur array=6
+k starts at 5 and goes to 0
+
+when k=5:
+- countarray[getFigit(..)]=countarray[2] for 5729
+(the value at input [k])=2
+
+we are using the perfix operator, so we subtract one from countarray[2]=1
+we then assign input[k] (5729) to tmp[1]
+
+the result will be like 
+0, 5729, 0, 0, 0, 0                 : temp array 
+
+0,0,1,3,3,3,3,3,4,6                 : count array 
+
+temp array now has the value 5729
+count arr[2] ha been decremented by 1, since we have written out 
+one value wiht 2 in the 10's position
+
+now k = 4:
+- countarr[getdigit(...)]=countarray[8] for 4586
+(the value at the input[k])= 4
+we are using the prefix operator, so we subtract one from count array[8]=3
+we then assign input[k](4586)to tmp[3]
+
+ 
+
+
+
