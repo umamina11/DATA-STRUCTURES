@@ -1,0 +1,19 @@
+ARRAY LISTS
+ArrayList is a Java class implemented using the List interface. 
+Java ArrayList, as the name suggests, provides the functionality of a 
+dynamic array where the size is not fixed as an array. Also, as a part 
+of the Collection framework, it has many features not available with
+arrays.
+The ArrayList class is a resizable array, which can be found in the 
+java.util package.
+
+The difference between a built-in array and an ArrayList in Java, 
+is that the size of an array cannot be modified (if you want to add or
+remove elements to/from an array, you have to create a new one).
+
+
+it is a resizable array implementaion oof the list interface and called backing array 
+it is great with iteration implementaion 
+to add items ot the array then it will be the slow and reduce the overall perfromace when 
+adding and removing of items in array list will be slow
+
