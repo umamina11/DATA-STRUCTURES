@@ -1,0 +1,31 @@
+INTRODUCTION TO LISTS 
+list is an abstract data type 
+it uses list interface 
+there are many list calsses but specifically here we will talk about the 
+-array list
+-linked list
+-vector
+-abstract list
+methods we are going to use here are the
+-add
+-contain 
+-get
+-indexof
+-remove
+-find
+-toarray
+
+here we work on ordered sequence (data is organised in sequence)
+
+
+ABSTRACT DATATYPE:
+
+- doesn't dicatede how the data is organized
+- dictates the operations your perfrom 
+- concerete data structure is usually a concerete calss
+- abstract data type is usually an interface
+- arrays have a proper orders and concerete infromation about the data but list 
+is an conceptual idea and didictae the operation which we can perfrom on data 
+(how can we access the items)
+- abtract data type is more of behaviours
+- any data structure can be used to implement abstract data type until we have a class
