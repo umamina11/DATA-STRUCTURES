@@ -17,3 +17,12 @@ it is great with iteration implementaion
 to add items ot the array then it will be the slow and reduce the overall perfromace when 
 adding and removing of items in array list will be slow
 
+
+in array list we listen to two words and need to understand the differenrce between then 
+those are 
+capacity and size
+capacity is the maximum number of elements it can hold before it need to be resized
+
+size is the the maximum number of elements present in array list
+
+
