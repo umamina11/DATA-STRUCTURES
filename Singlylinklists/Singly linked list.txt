@@ -1,0 +1,58 @@
+SINGLY LINKED LIST
+
+
+Singly linked list or local list 
+it is a  data structure a sequenctial list of objects without 
+the usage of array 
+each items in a list is aware of next time as they are linked to each other 
+which is not there in arrays
+
+here we have to store the integre value a;ong with the reference value
+
+each item in the list is called a node
+the first items in the list is the head of the list and last the items points to the null
+
+each node contain integer or infromation and then a node that reference node which point to the
+next items 
+
+Here the developer need to put the head items and the it traerse itself until reaches the null
+
+how can we insert and items to the head node in a list
+we have a example of link list in which we add the head node
+
+Jane->John->Mary->Mike->null
+
+
+1. Create a new node "Bill"
+2. Assign "Jane" to the next field
+3. Assign head to "Bill"
+4. Will be O(1) time complexity 
+
+In the list we insert any new items we add it at the first node or head node
+and this phenomena will give constant time complexity 
+
+and this will be the update linked list 
+
+Bill->Jane->John->Mary->Mike->null
+
+
+Delete the item 
+and this will also done on the first node 
+ 
+Bill->Jane->John->Mary->Mike->null
+
+Delete
+
+this is the linked list and now steps to remove the item 
+
+1. Assign 'Bill" to a temporary varibale "removedNode"
+2. Assign "head" to "Jane"
+3. Return "removedNode"
+4. Will be O(1) time complexity
+
+
+the updated list will look like
+
+Jane->John->Mary->Mike->null
+
+
