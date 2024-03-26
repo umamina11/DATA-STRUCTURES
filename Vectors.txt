@@ -1,0 +1,15 @@
+VECTORS
+
+A vector is a one-dimensional data structure and all of its elements 
+are of the same data type.
+A factor is one-dimensional and every element must be one of a 
+fixed set of values, called the levels of the factor.
+
+it is a thread safe list implementation
+it is very old and have been there when jdk 1.0 exists
+vectors are synchronised whereas arraylist not
+synchronisation makes the process slow thats why array list are not synchronisation 
+
+
+
+
