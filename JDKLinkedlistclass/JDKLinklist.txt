@@ -1,0 +1,28 @@
+THE JDK LINKED LIST CLASS
+
+predefined class in java
+this class will give doubly linedk LIST
+Doubly-linked list implementation of the List and Deque interfaces.
+Implements all optional list operations, and permits all elements (including null).
+
+uses list interface 
+List of methods
+-add
+-addfirst
+-addlast
+-clear
+-getfirst
+-getlast
+-indexOf
+-remove
+-removefirst
+-removelast
+-toArray
+
+it uses generic which can use anykind of class
+
+this is not syncronized
+ If multiple threads access a linked list concurrently, and at least 
+ one of the 
+ threads modifies the list structurally, it must be synchronized externally
+that we a developer need to do it self 
