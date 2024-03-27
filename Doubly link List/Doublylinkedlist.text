@@ -1,0 +1,69 @@
+DOUBLY LINKED LIST
+
+double linked list  we have nodes, head and a tail and each node points to the next
+ item and the previous items in the list 
+ here we have two references 
+
+ null<-Jane-><-John-><-Mary-><-Mike->null
+ here jane node is the head node and mike is the tail node 
+
+ er can reverse the list from head to tail and tail to head in a 
+ constnat time complexity
+ as we have a pointer and reference ot the node
+
+ as one advnatge over the singly link list is that we can deal with head and the 
+ tail node in constant time duration whihc is not possible there as we need to travese the w
+ whole list for that 
+ and the disadvantage that we face in the singl link list in whilw working with the middle node is t traverse and then find the 
+ node u want to work with 
+
+
+ WORKING
+
+ Insert at head
+ - create new node "Bill"
+ - Assign "jane" TO bill's next field
+ - Assign whatever jane os pointing at as previoud to bill's previous field
+ - Assign "Bill" to jane's previous field
+ - Assign head to "Bill"
+ - O(1) time complextiy
+
+ Insert at tail
+ - cerate a new node "Bill"
+ - Assign tail's next field to Bill's next field
+ - Assign tail to Bill's previous field
+ - Assign tail's next field to "Bill"
+ - Assign Tail to "Bill"
+ - O(1) time complexity
+
+
+Delete From head
+- Assign "Jane" to "removednode"
+- Assign John's previous field to Jane's previoud field
+- Assign head to Jane's next field 
+- Return "removednode" from the method
+- O(1) time complexity
+
+Delete from Tail
+- Assign "Bill" to "removednode"
+- Assign Mike's previous field to Bill's previoud field
+- Assign head to Bill's next field 
+- Return "removednode" from the method
+- O(1) time complexity
+
+TO INSERT A NODE A BETWEEN NODE B AND C
+
+-Assign A's next field to B's next field
+-Assign A's previous fild to C's previous field
+-Assign B's next filed to A
+-Assign C's previoud filed to A 
+-O(1) time complexity BUT we have to find the insertion position first, so that 
+this is actually O(n)
+
+
+TO REMOVE  NODE A BETWEEN NODE B AND C
+- Assign A to "removedNode"
+- Assign C's previous field to A's previous field
+- Assign B's next field to A's next field
+- Return A from the method
+- O(1) time complexity BUT we have to find A, So this is actucally O(n)
