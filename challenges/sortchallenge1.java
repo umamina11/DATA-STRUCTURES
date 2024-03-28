@@ -34,6 +34,7 @@
  * in the
  * input array
  */
+package challenges;
 
 public class sortchallenge1 {
 

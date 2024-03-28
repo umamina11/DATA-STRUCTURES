@@ -11,6 +11,8 @@
  * 
  */
 
+package challenges;
+
 public class sortchallenge3 {
 
     public static void main(String[] args) {

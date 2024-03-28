@@ -1,4 +1,4 @@
-package DoublylinkList;
+package challenges;
 
 public class EmployeeDoublyLinkedList {
 
@@ -32,6 +32,41 @@ public class EmployeeDoublyLinkedList {
         }
         tail = node;
     }
+
+    // Adding the items before any node using the method add before
+    public boolean addBefore(Employee newEmployee, Employee existingEmployee) {
+        if (head == null) {
+            return false;
+
+        }
+        // find the exisitng employee in list
+        EmployeeNode current = head;
+        while (current != null && !current.getEmployee().equals(existingEmployee)) {
+            current = current.getNext();
+        }
+        if (current == null) {
+            return false;
+
+        }
+
+        // insert the new item in from of exisitng employee
+        // chnaging previous node references
+        EmployeeNode newNode = new EmployeeNode(newEmployee);
+        newNode.setPrevious(current.getPrevious());
+        newNode.setNext(current);
+        current.setPrevious(newNode);
+
+        // next field
+        if (head == current) {
+            head = newNode;
+
+        } else {
+            newNode.getPrevious().setNext(newNode);
+        }
+        size++;
+        return true;
+    }
+
     // remove from the front of the list
 
     public EmployeeNode removeFromFront() {

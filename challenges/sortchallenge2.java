@@ -13,6 +13,7 @@
  * so we will create a class and then call it for sorting the array 
  * 
  */
+package challenges;
 
 public class sortchallenge2 {
     public static void insertionSortRecursive(int[] arr, int n) {
