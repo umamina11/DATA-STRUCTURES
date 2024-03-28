@@ -10,11 +10,12 @@ public class SortedLinkedList {
 
     void insert(int value) {
         Node newNode = new Node(value);
-
+        // if empty then add new node and set it as head
         if (head == null || head.value >= value) {
             newNode.next = head;
             head = newNode;
         } else {
+
             Node current = head;
             while (current.next != null && current.next.value < value) {
                 current = current.next;
