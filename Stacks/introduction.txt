@@ -1,0 +1,69 @@
+STACK
+
+in stacks we dedicate the what operation can be done on items rather than focusing on what 
+items it store 
+Thats why it is called as abstract datatype
+
+- Stack is a abstract datatype or ceonceptual 
+It never bother about how the datastore
+it can be backed by any datastructure
+TERMINOLOGIES
+- It is a LIFO (LAST IN FIRST OUT)
+means no random access as it allow the last item u added is removed first and then another and then another 
+it is allowed to look at the last element 
+Eg : Deck of cards 
+
+- push- adds an item to as the top item on the stacks
+adding items on top of the stack
+- pop- removes the top ietms on the stack 
+removing an item from the top
+- peek- gets the top item on the stack without popping it 
+just get the glace of item of the stack but cant perfrom any task(remove or add)
+- ideal backing dtatstructure : linked list perfrect one as in the linked list we want to work 
+from the first of the list and that would be the top item in the list 
+
+WORKING
+
+push(jane)
+
+[]
+[]
+[]
+[Jane]<---- top
+
+push (john)
+
+[]
+[]
+[John]<----top
+[Jane]
+
+push(mary)
+[]
+[Mary]<---top
+[John]
+[Jane]
+
+Pop(mary)
+
+[]
+[]
+[John]<--top
+[Jane]
+
+Peek (john)
+[]
+[]
+[John]<---top
+[Jane]
+
+TIME COMPLEXITY
+depn on backing on which datastructure
+- O(1) for push, pop, and peek when using a linked list 
+- if you use an array, then push is O(n), becuase the array may have to be resized
+- if you know the maximum number of items that will  ever be on the stack, an array can 
+be good choice
+- if memory is tight, an array might be good choice because in array we dont have any overhead items 
+
+linked list is ideal
+
