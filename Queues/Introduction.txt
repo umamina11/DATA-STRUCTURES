@@ -1,0 +1,45 @@
+QUEUES:
+Abstract datatype
+They ditictae how can we access the data not how the data is stored
+It also require other datastures to implement.
+FIFO(First In First Out): the ieme which get first in list will be removed or delted first from the list 
+It is like a pipe from one end we will put something and that will come out at first place
+line at resturant or cafe for orders (real life example)
+
+Functions/Operations:
+add     - also we call it enqueue
+        - add an itme at the end of the QUEUES
+remove  - also called as dequeue
+        - ermove the items at the front of the QUEUES
+peek    - get the item at the front of the queue, but dont remove it 
+
+The function or methods are similar like stack but the naming conventions are differnt here 
+Like the stack we can implement queues using the linked list and also arrays 
+
+WORKING
+
+10    15     4    22
+[front]           [back]
+
+Add (20): adding function will not change the front of the queue but it updates the back of the queue
+
+10    15     4     22     20
+[front]                   [back]
+
+Remove(): removing function will not change back of the queue but it change the from of the queue as the fron item is delated so new
+          front will be updated
+
+15     4     22     20
+[front]              [back] 
+here the removed value is 10 from the above queue
+
+Peek (): nothing will chnage it will only give the front value
+
+15     4     22     20
+[front]              [back] 
+
+
+time complexity of queue will depend on the data structure it was backing with similar to the 
+stacks 
+with linked list will be in constant time complexity
+
