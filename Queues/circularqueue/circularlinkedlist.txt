@@ -1,0 +1,17 @@
+The circular linked list is a linked list where all nodes are connected to form a 
+circle. In a circular linked list, the first node and the last node are connected
+to each other which forms a circle. There is no NULL at the end.
+
+Front: Get the front item from the queue.
+Rear: Get the last item from the queue.
+enQueue(value) This function is used to insert an element into the circular queue.
+In a circular queue, the new element is always inserted at the rear position. 
+Check whether the queue is full – [i.e., the rear end is in just before the front 
+end in a circular manner].
+If it is full then display Queue is full. 
+If the queue is not full then,  insert an element at the end of the queue.
+deQueue() This function is used to delete an element from the circular queue. In a 
+circular queue, the element is always deleted from the front position. 
+Check whether the queue is Empty.
+If it is empty then display Queue is empty.
+If the queue is not empty, then get the last element and remove it from the queue.
