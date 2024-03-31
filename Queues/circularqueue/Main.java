@@ -10,27 +10,35 @@ public class Main {
         Employee billEnd = new Employee("Bill", "End", 78);
 
         ArrayQueue queue = new ArrayQueue(5);
+        /*
+         * queue.add(janeJones);
+         * queue.add(johnDoe);
+         * queue.remove();
+         * queue.add(marySmith);
+         * queue.remove();
+         * queue.add(mikeWilson);
+         * queue.remove();
+         * queue.add(billEnd);
+         * queue.remove();
+         * queue.add(janeJones);
+         */
+
         queue.add(janeJones);
         queue.add(johnDoe);
-        queue.remove();
         queue.add(marySmith);
-        queue.remove();
         queue.add(mikeWilson);
-        queue.remove();
         queue.add(billEnd);
-        queue.remove();
-        queue.add(janeJones);
 
         queue.printQueue();
-        /*
-         * // remove
-         * queue.remove();
-         * queue.remove();
-         * queue.printQueue();
-         * 
-         * // peek
-         * System.out.println(queue.peek());
-         * queue.printQueue();
-         */
+
+        // remove
+        queue.remove();
+        queue.remove();
+        queue.printQueue();
+
+        // peek
+        System.out.println(queue.peek());
+        queue.printQueue();
+
     }
 }
