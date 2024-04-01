@@ -1,0 +1,60 @@
+HASHTABLES
+
+it is an abstract datatype
+it detitcate how you operate not how u store data 
+provides access to data using keys
+key doest have to be an Integer consists of key/value pairs- 
+datatype don't have to match 
+keys can be in any datatype but at the backend they all converted to the integers 
+
+optimized for retrieveal(when you know the key)
+associated array is one type of hash table 
+
+
+What is Hash Table?
+A Hash table is defined as a data structure used to insert, look up, and remove 
+key-value pairs quickly. It operates on the hashing concept, where each key is 
+translated by a hash function into a distinct index in an array. The index functions 
+as a storage location for the matching value. In simple words, it maps the keys with 
+the value.
+
+
+Hashing 
+- maps keys of any data type to an integer 
+- hash function map keys to int
+- In java, hash function is Object.hashCode()
+- Collision occurs when more than one value has the same hashed value
+
+Hashing is a technique to convert a range of key values into a range of indexes 
+of an array. We're going to use modulo operator to get a range of key values. 
+Consider an example of hash table of size 20, and the following items are to be 
+stored. Item are in the (key,value) format.
+
+
+Load Factor 
+A hash table’s load factor is determined by how many elements are kept there in 
+relation to how big the table is. The table may be cluttered and have longer search 
+times and collisions if the load factor is high. An ideal load factor can be 
+maintained with the use of a good hash function and proper table resizing.
+
+
+- tells us how a hash table is 
+- load factor=#of items/capacity=size/capacity
+- load factor is used to decide when to resize the array bakcing the hash table 
+- Don't want load factor too low(lots of empty spcae)
+- Don't want load factor too high (it will increase the likelihood of collisions)
+- Can play a role in determining the time complexity for retrieval 
+
+
+ADD TO A HAS TABLE BACKED BY AN ARRAY 
+1. provide a key/value pair
+2. use a hash fucntion to hash the key to an int value
+3. store the value at the hashed key value- this is the index into the array
+
+RETRIEVE A VALUE FORM A HASH TABLE
+1. Provide the key 
+2. Use the same hash function to hash the key to an int value(otherwise it will not work)
+3. Retrieve the value stores at the hashed key value (in case of collison we need to seach 
+through each and every element)
+
+
