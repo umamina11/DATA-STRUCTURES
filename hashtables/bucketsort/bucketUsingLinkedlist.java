@@ -1,0 +1,46 @@
+package hashtables.bucketsort;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
+public class bucketUsingLinkedlist {
+    public static void main(String[] args) {
+        int[] intArray = { 54, 46, 83, 66, 95, 92, 43 };
+        bucketSort(intArray);
+        for (int i = 0; i < intArray.length; i++) {
+            System.out.println(intArray[i]);
+        }
+    }
+
+    public static void bucketSort(int[] input) {
+        List<Integer>[] buckets = new List[10];
+
+        for (int i = 0; i < buckets.length; i++) {
+            buckets[i] = new LinkedList<Integer>(); // the only change required while using the linked list
+
+        }
+        for (int i = 0; i < input.length; i++) {
+            // scattering pashe
+            buckets[hash(input[i])].add(input[i]);
+
+        }
+        // sorting each bucket
+        for (List bucket : buckets) {
+            Collections.sort(bucket);
+        }
+        // merging or gathering phase
+        int j = 0;
+        for (int i = 0; i < buckets.length; i++) {
+            for (int value : buckets[i]) {
+                input[j++] = value;
+            }
+        }
+
+    }
+
+    private static int hash(int value) {
+        return value / (int) 10 % 10;
+    }
+}

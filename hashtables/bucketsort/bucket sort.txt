@@ -1,0 +1,50 @@
+BUCKET SORT 
+
+- uses hashing
+- makes assumptions about the data, like radix and counting sort
+- because it makes assumptions, can sort in O(n) time or linear time 
+- perfroms best when hashed values of items being sorted are evenly distributed, 
+  so there aren't many collisions. 
+- here there is no concept of key and values 
+
+WORKING 
+1. Distributed the items into buckets based on their hashed values( scattering phase)
+2. Sort the items in each bucket
+3. Merge the bucket -can just concatenate them (gathering phase)( copying items back into the originally array)
+
+The conditon of the gathering pahse these conditons need to be perfromed first
+the values in bucket X must be greater than the values in bucket X-1 and less than the values
+in the bucket X+1
+
+This means that the hash function we use must meet this requirement. 
+
+A generalized of counting sort 
+
+
+Example 
+the array that need to be sorted 
+
+54, 46, 83, 66, 95, 92, 43
+
+bucket will be sorted based on 10s value 
+
+Scattering pahse
+_, _, _, 46->43, 54, 66, _, 83, 95->92
+
+Gathering pahse
+_, _, _, 43->46, 54, 66, _, 83, 92->95
+
+Final sorted array 
+43, 46, 54, 66, 83, 92, 95
+
+Conclusion 
+- not in-place algorithm 
+- stability will depend on sort algorithm used to sort the buckets- ideally, you want
+a stable sort
+- To achieve O(n), must have only one item per bucket
+- Insertion sort is often used to sort the bucket because it is fast when the number of items 
+is small
+
+for sorting bucket the algortihm used will define whether it is stable or not
+
+
