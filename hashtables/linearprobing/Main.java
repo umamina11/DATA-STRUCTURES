@@ -17,6 +17,14 @@ public class Main {
         ht.printHashtable();
 
         System.out.println("Retrieve key wilson: " + ht.get("Wilson"));
+        System.out.println("Retrieve key wilson: " + ht.get("Wilson"));
+
+        // remove
+        ht.remove("Wilsom");
+        ht.remove("Smith");
+
+        ht.printHashtable();
+
     }
 
 }
