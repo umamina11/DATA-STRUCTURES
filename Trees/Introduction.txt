@@ -1,0 +1,44 @@
+TREES
+
+Trees to diticate how to organise the data and also by operatioons of data that's why the confusion 
+is still there that it is a abstract dataype or datastructures
+
+If someone asked what is a tree 
+as in real work it has brances, leavses here also 
+
+TREE is a hierarchical data structure 
+                  15   ------------>Root
+                /  |  \------------>Edge (arrow)
+              22   4   17
+            /    / | \  | \
+           19   9  18 3 11 0   ----> Leaf
+
+Every element is called as node 
+Node have children(0, one, or more)
+Every node/child has one parent 
+The top most node is called the root, above which there is no parent (15)
+Every tree has only one and only one node
+Leaf node are the one who dont have any further child (19, 9, 18, 3, 11, 0)
+Subtree is a node along with all its descendends.
+Path a sequence of nodes require to reach a element node
+no cycles are required in paths, it's alway one way 
+Depth is the number of edges required to reach the element , straight and shortest
+Height: the number of edges requied to the elment node and for calacuating this the 
+longest path edges are calculated.
+Example here the height of tree is 3 
+leaf node height is always 0
+height of root node= height of tree
+Siblings : have same or one parent and same level
+Depth= height
+
+
+ application
+ java class
+ file or folder in system 
+
+ Every item in the tree is a node
+ The node at the top of the tree is the root 
+ Every non-root node has one and only one parent 
+ A leaf node has no children
+ A signleton tree has only one node - the root
+
