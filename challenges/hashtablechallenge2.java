@@ -1,3 +1,10 @@
+/*
+ * - remove the duplicate items from a linked list 
+ * - your solution must use the JDK's Linked List class
+ * - your solution must use a hash map 
+ * - use the started project in the resource section
+ * 
+ */
 package challenges;
 
 import java.util.ArrayList;

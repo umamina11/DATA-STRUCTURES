@@ -1,0 +1,19 @@
+SEARCH ALGORITHMS 
+INTRODUCTION
+Searching algorithms are essential tools in computer science used to locate specific
+items within a collection of data. These algorithms are designed to efficiently 
+navigate through data structures to find the desired information, making them 
+fundamental in various applications such as databases, web search engines, and more.
+
+Terminologies
+1. Target Element: The specific target element or items that we want to find within a 
+collection of data that can be in form of any datastructure.
+2. Search Space: the entire collection of data within hich we are looking for the target 
+element or item 
+
+It will find a  value in a data structure 
+
+Deterministic: algorithms which follow a clear, systematic apprach
+one such example is linear seach 
+non-Deterministic : Algorithms which needs to examine the enitre spcae in the worst case 
+scenario. 
