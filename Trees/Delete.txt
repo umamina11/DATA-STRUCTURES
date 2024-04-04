@@ -1,0 +1,82 @@
+DELETE A Node
+
+3 cases
+- node is a leaf
+easiest one as here the developer need not to wory about any child node as it the last ndoe 
+
+- node has one child
+if there is one child then after deleting the node, the child will replce the position of 
+the deleted node
+
+- node has two children 
+complex 
+
+this is the tree we are wroking with 
+                    25
+                   /   \
+                  20   27
+                 / \   /  \
+                15 22 26   30 
+                  \       /  \
+                   17    29  32
+
+DELETE node 17 
+we can knock off 17 without any other conditons as it is a leaf node and removing this will 
+not affect any other node
+
+                    25
+                   /   \
+                  20   27
+                 / \   /  \
+                15 22 26   30 
+                          /  \
+                         29  32
+
+DELETE node 15
+replace the node with child of that node so here we will replace node 15 by node 17 
+no matter of it is a right child or left child
+
+                    25
+                   /   \
+                  20   27
+                 / \   /  \
+                17 22 26   30 
+                          /  \
+                         29  32
+
+DELETE node with two children (COMPLEX ONE)
+- need to figure out what the replacement node will be
+- want minimal disruption to the existing tree structure
+- can take the replacement node from the deletednode's left subtree or the right subtree
+- if taking it from the left subtree, we have to take the largest value in the left subtree
+- if taking it from the right subtree, we have to take the smallest value in the right 
+  subtree
+- choose one and stick to it 
+- we need to check all the conditons of a binary tree 
+
+
+delete 20
+                    25
+                   /   \
+                  20   27
+                 / \   /  \
+                15 22 26   30 
+                  \       /  \
+                   17    29  32
+
+move down the left subtree and then look for the higest value
+here in we move down the right subtree and then check for the largest value at the leaf node 
+and that will replace the node 
+the node we find to replace should have a right child or both child, no left child is required
+
+here is the updated tree
+
+                    25
+                   /   \
+                  17   27
+                 / \   / \
+                15 22 26  30 
+                         /  \
+                         29  32
+
+

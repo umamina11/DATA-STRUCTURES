@@ -1,22 +1,23 @@
-package Trees;
+package challenges;
 
 public class TreeNode {
+
     private int data;
     private TreeNode leftChild;
     private TreeNode rightChild;
 
-    // tree node insertion
+    public TreeNode(int data) {
+        this.data = data;
+    }
+
     public void insert(int value) {
-        // checking duplicate value
         if (value == data) {
             return;
-            // if not duplciate
-            // if left child is there
         }
+
         if (value < data) {
             if (leftChild == null) {
                 leftChild = new TreeNode(value);
-                // have left child then loop will again run
             } else {
                 leftChild.insert(value);
             }
@@ -26,15 +27,14 @@ public class TreeNode {
             } else {
                 rightChild.insert(value);
             }
-
         }
     }
 
-    // get methods
     public TreeNode get(int value) {
         if (value == data) {
             return this;
         }
+
         if (value < data) {
             if (leftChild != null) {
                 return leftChild.get(value);
@@ -44,10 +44,10 @@ public class TreeNode {
                 return rightChild.get(value);
             }
         }
+
         return null;
     }
 
-    // MIN AND MAX METHOD
     public int min() {
         if (leftChild == null) {
             return data;
@@ -56,7 +56,6 @@ public class TreeNode {
         }
     }
 
-    // max
     public int max() {
         if (rightChild == null) {
             return data;
@@ -65,24 +64,28 @@ public class TreeNode {
         }
     }
 
-    // Traverse in Order
-    // reading left child
     public void traverseInOrder() {
         if (leftChild != null) {
             leftChild.traverseInOrder();
         }
-        System.out.println("Data = " + data + ", ");
-        // reading right child
+        System.out.print(data + ", ");
         if (rightChild != null) {
             rightChild.traverseInOrder();
         }
     }
 
-    // constructor for accepting values
-    public TreeNode(int data) {
-        this.data = data;
+    public void traversePreOrder() {
+
+        System.out.print(data + ", ");
+
+        if (leftChild != null) {
+            leftChild.traversePreOrder();
+        }
+
+        if (rightChild != null) {
+            rightChild.traversePreOrder();
+        }
     }
-    // getter and setter for above variables
 
     public int getData() {
         return data;
@@ -100,7 +103,7 @@ public class TreeNode {
         this.leftChild = leftChild;
     }
 
-    public TreeNode getrightChild() {
+    public TreeNode getRightChild() {
         return rightChild;
     }
 
@@ -108,4 +111,7 @@ public class TreeNode {
         this.rightChild = rightChild;
     }
 
+    public String toString() {
+        return "Data = " + data;
+    }
 }
