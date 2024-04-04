@@ -1,0 +1,137 @@
+BINARY SEARCH TREE
+
+Every node has 0,1, or 2 children 
+Children are referred to as left child and right child 
+In practice we use binary search tree
+
+Here is a binary tree
+
+                15
+               /  \
+             22    4
+            /     / \
+           19    18  3
+                   \
+                   14
+
+binary tree is complete if evrey level have two children except the last have two children 
+
+example 
+                15
+               /  \
+              22   4
+             / \  /
+            19 18 3
+
+full binary tree is a complete tree which have evrey node have two children 
+it is fine to have a incomplete binary tree
+
+Binary Search tree or BST 
+- can perfrom insertions, deletions, and retrievals in O(logn) time duration 
+- the left child always has a smaller value than its parent 
+- the right child is always has a larger value than its parent 
+- this means everything to the left of the root is less than the value of the root, and everything 
+  to the right of the root is gerater than the value of the root
+- becuase of that we cant do a bonary search. 
+- faster searches than unsorted arrays do.
+- how duplicate work in binary tree (they are not allowed)
+
+INSERTION 
+here are the elements 
+25, 20, 25, 27, 30, 29, 26, 22, 32
+
+okay so the first element is 25
+
+                    25
+
+now the next element is 20 which is less than the 25 so it will come at the left of the tree
+
+                    25
+                   /
+                  20 
+
+now next element is 15, which is less than 25 so it will come to left and when compare 
+it to 20 and also less than 20 so it will come at the left side os the 20 
+
+                    25
+                   /
+                  20 
+                 /
+                15
+
+now the next element 27 which is greater than 25 so it will come at the right side of the root node
+
+                    25
+                   /   \
+                  20   27
+                 /
+                15
+
+now we have 30 which is larger than 25  and also greater than 27 so it will be the right child of 27
+
+                    25
+                   /   \
+                  20   27
+                 /       \
+                15        30 
+
+29 which is greter than 25 and gretaer then 27 but less than 30 so it will become the 
+left child of 30 
+
+                    25
+                   /   \
+                  20   27
+                 /       \
+                15        30 
+                         /
+                        29
+26 on comapring noted than greater than 25, less than 27 so it will become the left child of the 
+27 node 
+
+                    25
+                   /   \
+                  20   27
+                 /    /  \
+                15   26    30 
+                         /
+                        29
+
+22 comapre we get that less than 25 so it will come on the left side and gretaer than 
+20 so it will become the right child of the element 20 
+
+                    25
+                   /   \
+                  20   27
+                 / \   /  \
+                15 22 26   30 
+                         /
+                        29
+
+32 compare it in the table which is greater than 25 and also grater than 27 also from 30 so it will 
+become the right child of the 30 
+
+                    25
+                   /   \
+                  20   27
+                 / \   /  \
+                15 22 26   30 
+                          /  \
+                         29  32
+
+ we will get the minimum number by just folllowing to the left most edges
+
+
+ if we insert the sorted data (descending order) in binary tree it looks like 
+
+here is the data: 25, 20, 25, 20
+
+                    25
+                   /
+                  20
+                 /
+                15
+               /
+              10
+
+in ascending order we will get all left binary tree
+

@@ -1,0 +1,92 @@
+
+Traversal 
+Tree traversal involves searching a tree data structure one node at a time, 
+performing functions like checking the node for data or updating the node. 
+
+There are differnt methods to perfrom the traversing the tree and those are
+- level: visit nodes on each level (not used often used)
+- Pre-order: visit the root of every subtree first
+- post -order: visit the root of the every subtree last
+- In-order: visit left child, then root, then the right child
+
+Level Traversal 
+                25
+               /  \
+              /    \
+             20    27
+            /  \   / \
+          15   22 26  30
+                      / \
+                    29  32
+level order
+ 
+25, 20, 27, 15, 22, 26, 30, 29, 32
+
+level 1  -->  level-Left 2(left)  -->  Level-Left 2(right)  -->  level-Right 2(left)
+  -->  Level-Right 2(right)  -->  level 3(left)  -->  level 3(right)
+
+PRE-ORDER
+                25
+               /  \
+              /    \
+             20    27
+            /  \   / \
+          15   22 26  30
+                      / \
+                    29  32
+pre-order 
+
+25, 20, 15, 22, 27, 26, 30, 29, 32
+
+
+(Root)25  -->  (Root)20  -->  (Child)15  -->  (Child)22  -->  (Root)27
+-->  (Child)26  -->  (Root)30  -->(Child)29  -->  (Child)32
+
+IN-ORDER 
+
+                25
+               /  \
+              /    \
+             20    27
+            /  \   / \
+          15   22 26  30
+                      / \
+                    29  32
+                    
+in-order
+
+leftside ->root->rightside
+
+15, 20, 22, 25, 26, 27, 29, 30, 32
+
+Left(leftChild)15  -->  Left(Root)20  -->  Left(rightChild)22  -->   Root 25  --> 
+Right(leftChild)26  -->   Right(Root)27  -->  Right(leftChild)29  -->  Right(Root)30
+-->  Right(rightChild)32
+
+It will give us a sorted data
+
+POST-ORDER 
+
+                25
+               /  \
+              /    \
+             20    27
+            /  \   / \
+          15   22 26  30
+                      / \
+                    29  32
+
+post order:
+15, 22, 20, 26, 29, 32, 30, 27, 25
+
+entire left subtree->right subtree-> root
+
+
+LeftSubtree(leftChild)15  -->   LeftSubtree(RightChild)22  -->  LeftSubtree(RootNode)20
+-->  RightSubtree(leftchild)26  -->  RightSubtree(leftChild)29  -->  
+RightSubtree(RightChild)32  --> RightSubtree(Root-child)30  --> RightSubtree(root-child)27
+-->  Root 25
+
+
+
+
