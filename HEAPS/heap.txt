@@ -1,0 +1,142 @@
+HEAP 
+A Heap is a complete binary tree data structure that satisfies the heap 
+property: for every node, the value of its children is less than or equal 
+to its own value. Heaps are usually used to implement priority queues, where 
+the smallest (or largest) element is always at the root of the tree
+
+a heap is a complete binary tree must satisfy the heap property 
+max heap: every parent is greater than or equal to its children
+min Heap: Every parent is less than or equal to its children 
+
+A binary heal must be a complete tree
+- children are added at each level from left to right 
+- usually implemented as arrays
+- the maximum or minimum value will always be the root of the tree- the advanatage  of  
+using a map 
+- heapify: process of converting a binary tree into a heap- this often has to be done after 
+an insertion and deletion 
+- no required order between siblings 
+
+
+here we have a tree 
+                  15
+                  / \
+                 22  4
+                /   / \
+               19  18  3
+                     \
+                     14
+
+
+this is not a heap 
+- firt it is not a complete bnary tree                     
+- second every level need to be full othern thena the leaf node 
+
+
+now this one is a heap 
+                    22
+                    / \
+                   19  18
+                  / \ / \
+                15  3 14 4
+                /
+               12
+
+Heap Operations
+Common heap operations are:
+
+Insert: Adds a new element to the heap while maintaining the heap property.
+Extract Max/Min: Removes the maximum or minimum element from the heap and returns it.
+Heapify: Converts an arbitrary binary tree into a heap.
+Heap Data Structure Applications
+Heaps have various applications, like:
+
+Heaps are commonly used to implement priority queues, where elements are retrieved based on their priority (maximum or minimum value).
+Heapsort is a sorting algorithm that uses a heap to sort an array in ascending or descending order.
+Heaps are used in graph algorithms like Dijkstra’s algorithm and Prim’s algorithm for finding the shortest paths and minimum spanning trees.
+
+
+
+HEAP AS ARRAY 
+here we are dealing with binary tree so we will use the arrays as their backing data structure
+
+- we can store binary heaps as array 
+- we put the root at array[0]
+- we then traverse each level from left to right 
+- and so the left child of the root would go into array[1], its right child would go into 
+  array[2], Ext
+
+  here is an example
+
+  its the array
+
+  22, 19, 18, 15, 3, 14, 4, 12
+
+                 22
+                / \
+               19  18
+              / \  / \
+             15  3 14 4
+            /
+           12
+
+for the node at array[i]:
+
+left child = 2i + 1 
+right child = 2i + 2
+
+parent = floor((i-1)/2)
+
+
+INSERT INTO THE HEAP 
+
+- Always add new item to the end to the array 
+- then we have to fix new heap (heapify)
+- We compare the new item against its parent 
+- if the item is greater than its, parent, we swap it with its parent 
+- we then rinse and repeat 
+
+exmaple 
+                 22
+                / \
+               19  18
+              / \  / \
+             15  3 14 4
+            /
+           12
+
+here is the tree and start adding element 20 
+                 22
+                / \
+               19  18
+              / \  / \
+             15  3 14 4
+            / \
+           12 20
+but as it is observed that it will not follow the rule of complete binary tree so 
+we will swap 20 with its parent 
+
+                22
+                / \
+               19  18
+              / \  / \
+             20  3 14 4
+            / \
+           12 15
+
+now we again compare it with its parent again swap 
+
+                22
+                / \
+               20  18
+              / \  / \
+             19  3 14 4
+            / \
+           12 15
+
+not this whole process is called hepify and we will get a proper heap 
+or complete binary tree
+
+
+
+
