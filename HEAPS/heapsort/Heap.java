@@ -1,4 +1,4 @@
-package HEAPS;
+package HEAPS.heapsort;
 
 public class Heap {
     private int[] heap;
@@ -37,6 +37,20 @@ public class Heap {
         }
         size--;
         return deletedValue;
+    }
+
+    // heap sort
+
+    public void sort() {
+        int lastHEapIndex = size - 1;
+        for (int i = 0; i < lastHEapIndex; i++) {
+            int tmp = heap[0];
+            heap[0] = heap[lastHEapIndex - i];
+            heap[lastHEapIndex - i] = tmp;
+
+            fixHeapBelow(0, lastHEapIndex - i - 1);
+
+        }
     }
 
     // comparing values to pareants

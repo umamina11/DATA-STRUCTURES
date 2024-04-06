@@ -138,5 +138,17 @@ not this whole process is called hepify and we will get a proper heap
 or complete binary tree
 
 
+Time COmplexity with differnt funtion 
+insertion 
+it will take constant time complexity 
+not relly on how many values it have 
+worst case is o(logn)
+
+delete 
+find element and then delete so it will be linaer
+which is O(n)
+worst case is O(nlogn)
+find remove and replace it 
+
 
 

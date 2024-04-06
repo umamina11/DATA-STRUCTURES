@@ -1,0 +1,37 @@
+HEAP SORT 
+- we know that root is the largest value 
+- swap root witht the last element in th arrays
+- heapify the tree, but exclude the last node
+- after heapify , second largest element at the root
+- rinse and repeat 
+ 
+
+
+ so this is the heap we will work on
+
+ 80, 75, 60, 68, 55, 40, 52, 67
+ lastheapIndex=7
+ swap heap[0] with the [lastHeapIndex]
+
+ 67, 75, 60, 68, 55, 40, 52, 80
+it is not a heap so heapify by looking dow the tree
+
+lastHeapIndex=6
+ swap heap[0] with the [lastHeapIndex]
+
+  68, 67, 60, 52, 55, 40, 75, 80
+it is not a heap so heapify by looking dow the tree
+
+lastHeapIndex=5
+ swap heap[0] with the [lastHeapIndex]
+
+  40, 67, 60, 52, 55, 68, 75, 80
+it is not a heap so heapify by looking dow the tree
+
+lastHeapIndex=4
+ swap heap[0] with the [lastHeapIndex]
+
+  40, 67, 60, 52, 55, 68, 75, 80
+it is not a heap so heapify by looking dow the tree
+
+and continue

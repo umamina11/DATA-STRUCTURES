@@ -1,5 +1,5 @@
 // max heap
-package HEAPS;
+package HEAPS.heapsort;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,6 +21,9 @@ public class Main {
 
         // peek
         System.out.println(heap.peek());
+
+        heap.sort();
+        heap.printHeap();
     }
 
 }
