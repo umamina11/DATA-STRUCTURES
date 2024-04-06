@@ -40,4 +40,14 @@ public class Heap {
         return (index - 1) / 2;
     }
 
+    // is empty (checking the heap )
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    // get child
+    public int getChild(int index, boolean left) {
+        return 2 * index + (left ? 1 : 2);
+    }
+
 }

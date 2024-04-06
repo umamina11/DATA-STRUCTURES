@@ -1,0 +1,102 @@
+DELETE - heaps 
+
+- must choose a replacement value
+- will take the right value, so that the tree remain complete
+- then we must heapify the heapify
+- when replacement value is greater then parent fix the above. othewise fix the heap below
+if the value of the replacemetn node is greater than the deleted node than we look up the 
+heap to make the changes and if it is smaller or equal then we look at the below or child 
+of that tree to make the heap which have a complete binary tree.
+
+- fix heap above- same as insert.Swap the replacement value with the parent 
+- fix the heap below- swap the replacement with the larger of its two children ( as the larger child will 
+become the parent and the it is larger than the older sibling and the other belwo it will allow them to 
+follow the complete tree concept )
+- rinse and repeat in both cases untill the replacement value is in its correct position
+- we will need to fix either the up or the down heap, not both at a time
+
+
+lets take an example 
+               80
+               / \
+              /   \
+             75   60
+            / \   / \
+           68 55 40 52
+          /
+         67
+
+Delete: 75
+replacement value: 67
+right most leaf at the bottom leaf 
+
+               80
+               / \
+              /   \
+             67   60
+            / \   / \
+           68 55 40 52
+
+but as noticed this is no longer a heap 
+we need to heapify it to make it a heap 
+conpare 67 against its parents which clearly states that no need to make the change 
+above the heap 
+so we will look at the children of the heap and replace it or swap it from the largest 
+of its children
+
+               80
+               / \
+              /   \
+             68   60
+            / \   / \
+           67 55 40 52
+
+this is a heap again 
+
+here is an another example 
+               80
+               / \
+              /   \
+             75   60
+            / \   / \
+           68 55 40 52
+          /
+         67 
+
+Delete: 40 
+Replacement value: 67 
+
+               80
+               / \
+              /   \
+             75   60
+            / \   / \
+           68 55 67 52
+
+Now compare it with its parents and here got that it is larger than their parent so 
+we will make changes in the above heap 
+
+               80
+               / \
+              /   \
+             75   60
+            / \   / \
+           68 55 67 52
+
+
+so we swap it again with its parent 
+so the updated tree looks like
+
+               80
+               / \
+              /   \
+             75   67
+            / \   / \
+           68 55 60 52
+
+again look at the parent and compare it is less than the above parent so we will leave
+
+and here we get the complete tree or say heap 
+
+
+
