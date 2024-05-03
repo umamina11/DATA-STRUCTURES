@@ -53,8 +53,6 @@ Node removeDuplicates(Node head){...}
  
   */
 
-package Practice;
-
 public class removeduplicate {
-    
+
 }
