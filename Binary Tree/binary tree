@@ -1,0 +1,375 @@
+BINARY TREE
+
+### What is Binary Tree?
+Binary tree it is hierarical data structures.
+where we have a parent node and the child nodes 
+a node has two children at most (called as left child and right child)
+It is a non linear data-structure ( a form of data structure where the data elements are not arranged in linearly or sequentially)
+The top most node is called root node and rest are children and parent nodes to one another
+
+And the bottom-most nodes are called leaves which are the end level 
+
+This is the respresentation of binary tree
+
+![alt text](image.png)
+
+
+### OPERATIONS ON BINARY TREE
+1. Insertion in Binary Tree
+We can insert a node anywhere in a binary tree by inserting the node as the left or right child of any node or by making the node as root of the tree.
+
+Algorithm to insert a node in a Binary Tree:
+
+Check if there is a node in the binary tree, which has missing left child. If such a node exists, then insert the new node as its left child.
+Check if there is a node in the binary tree, which has missing right child. If such a node exists, then insert the new node as its right child.
+If we don’t find any node with missing left or right child, then find the node which has both the children missing and insert the node as its left or right child.
+
+2. Traversal of Binary Tree
+Traversal of Binary Tree involves visiting all the nodes of the binary tree. Tree Traversal algorithms can be classified broadly into two categories:
+
+Depth-First Search (DFS) Algorithms
+Breadth-First Search (BFS) Algorithms
+Depth-First Search (DFS) algorithms:
+Preorder Traversal (current-left-right): Visit the current node before visiting any nodes inside the left or right subtrees. Here, the traversal is root – left child – right child. It means that the root node is traversed first then its left child and finally the right child.
+Inorder Traversal (left-current-right): Visit the current node after visiting all nodes inside the left subtree but before visiting any node within the right subtree. Here, the traversal is left child – root – right child.  It means that the left child is traversed first then its root node and finally the right child.
+Postorder Traversal (left-right-current): Visit the current node after visiting all the nodes of the left and right subtrees.  Here, the traversal is left child – right child – root.  It means that the left child has traversed first then the right child and finally its root node.
+Breadth-First Search (BFS) algorithms:
+Level Order Traversal:  Visit nodes level-by-level and left-to-right fashion at the same level. Here, the traversal is level-wise. It means that the most left child has traversed first and then the other children of the same level from left to right have traversed.
+
+3. Deletion in Binary Tree
+We can delete any node in the binary tree and rearrange the nodes after deletion to again form a valid binary tree.
+
+Algorithm to delete a node in a Binary Tree:
+Starting at the root, find the deepest and rightmost node in the binary tree and the node which we want to delete. 
+Replace the deepest rightmost node’s data with the node to be deleted. 
+Then delete the deepest rightmost node.
+Deletion-in-Binary-Tree-.webpDeletion-in-Binary-Tree-.webp
+
+4. Searching in Binary Tree
+We can search for an element in the node by using any of the traversal techniques.
+
+Algorithm to search a node in a Binary Tree:
+
+Start from the root node.
+Check if the current node’s value is equal to the target value.
+If the current node’s value is equal to the target value, then this node is the required node.
+Otherwise, if the node’s value is not equal to the target value, start the search in the left and right child.
+If we do not find any node whose value is equal to target, then the value is not present in the tree.
+
+
+### Advantages of Binary Tree
+Efficient Search: Binary trees are efficient when searching for a specific element, as each node has at most two child nodes, allowing for binary search algorithms to be used.
+Memory Efficient: Binary trees require lesser memory as compared to other tree data structures, therefore they are memory-efficient.
+Binary trees are relatively easy to implement and understand as each node has at most two children, left child and right child.
+### Disadvantages of Binary Tree
+Limited structure: Binary trees are limited to two child nodes per node, which can limit their usefulness in certain applications. For example, if a tree requires more than two child nodes per node, a different tree structure may be more suitable.
+Unbalanced trees: Unbalanced binary trees, where one subtree is significantly larger than the other, can lead to inefficient search operations. This can occur if the tree is not properly balanced or if data is inserted in a non-random order.
+Space inefficiency: Binary trees can be space inefficient when compared to other data structures. This is because each node requires two child pointers, which can be a significant amount of memory overhead for large trees.
+Slow performance in worst-case scenarios: In the worst-case scenario, a binary tree can become degenerate or skewed, meaning that each node has only one child. In this case, search operations can degrade to O(n) time complexity, where n is the number of nodes in the tree.
+
+### Applications of Binary Tree
+Binary Tree can be used to represent hierarchical data.
+Huffman Coding trees are used in data compression algorithms.
+Priority Queue is another application of binary tree that is used for searching maximum or minimum in O(1) time complexity.
+Useful for indexing segmented at the database is useful in storing cache in the system,
+Binary trees can be used to implement decision trees, a type of machine learning algorithm used for classification and regression analysis.
+
+### TYPES OF BINARY TREE
+
+Types of Binary Tree in different categories based on diffrent factors:
+## ON BASIS OF NUMBER OF CHILDREN
+
+### Full binary Tree
+It is a binary tree with either 0 (zero) or two child nodes for each node
+
+Example :
+               4
+              / \
+             1   6
+            / \  
+           3   8
+
+here 4 has maximum number of childern allowed(2)then we have left child 1 who also has maximum number of children which are 3 and 8 and those are also called leaf nodes 
+
+
+**Facts derived from the theorem:*
+
+If T has I internal nodes, the total number of nodes is N = 2I + 1.
+If T has a total of N nodes, the number of internal nodes is I = (N – 1)/2.
+If T has a total of N nodes, the number of leaves is L = (N + 1)/2.
+If T has L leaves, the total number of nodes is N = 2L – 1.
+If T has L leaves, the number of internal nodes is I = L – 1. 
+Some other properties:
+There are a maximum of 2k nodes in level k for every k >= 0.
+The binary tree with λ levels has maximum of 2λ-1 nodes.
+The binary tree with N nodes has the number of levels at least [log (N + 1)].
+The binary tree with L leaves has the number of leaves at least [log L] + 1.
+
+
+
+### Degenerated Binary tree
+Every non-leaf node has just one child in a binary tree known as a Degenerate Binary tree. The tree effectively transforms into a linked list as a result, with each node linking to its single child.
+
+
+**Degenerate Binary tree is of two types:*
+
+Left-skewed Tree:  If all the nodes in the degenerate tree have only a left child.
+Right-skewed Tree: If all the nodes in the degenerate tree have only a right child.
+
+**Time Complexity: O(N)*
+**Auxiliary Space: O(N)*
+
+
+Example of the binary tree
+
+            3     --->head
+             \
+              2
+               \
+                7
+               /
+              9       ---->leaf node
+
+each parent has only one child no matter what 
+
+
+### Skewed Binary Tree
+A skewed binary tree is a type of binary tree in which all the nodes have only either one child or no child.
+
+This is of two types 
+1. Left Skewed Binary Tree: 
+These are those skewed binary trees in which all the nodes are having a left child or no child at all. It is a left side dominated tree. All the right children remain as null.
+
+2. Right Skewed Binary Tree: 
+These are those skewed binary trees in which all the nodes are having a right child or no child at all. It is a right side dominated tree. All the left children remain as null.
+
+Example of both the trees 
+
+Left Skewed tree
+        5   -----> Head node
+       /
+      2
+     /
+    9      ------>leaf node
+
+Right Skewed Tree
+        7        --->head node
+         \
+          2
+           \
+            5    --->leaf node
+
+
+### ON BASIS OF COMPLETION OF LEVELS
+
+### Complete Binary Tree
+A complete binary tree is a special type of binary tree where all the levels of the tree are filled completely except the lowest level nodes which are filled from as left as possible.
+
+**Some terminology of Complete Binary Tree:*
+Root – Node in which no edge is coming from the parent. Example -node A
+Child – Node having some incoming edge is called child. Example – nodes B, F are the child of A and C respectively.
+Sibling – Nodes having the same parent are sibling. Example- D, E are siblings as they have the same parent B.
+Degree of a node – Number of children of a particular parent. Example- Degree of A is 2 and Degree of C is 1. Degree of D is 0.
+Internal/External nodes – Leaf nodes are external nodes and non leaf nodes are internal nodes.
+Level – Count nodes in a path to reach a destination node. Example- Level of node D is 2 as nodes A and B form the path.
+Height – Number of edges to reach the destination node, Root is at height 0. Example – Height of node E is 2 as it has two edges from the root.
+
+
+**Properties of Complete Binary Tree:*
+A complete binary tree is said to be a proper binary tree where all leaves have the same depth.
+In a complete binary tree number of nodes at *depth d is 2d*. 
+In a  complete binary tree with n nodes height of the tree is *log(n+1)*.
+All the levels except the last level are completely full.
+
+*Algorithm:*
+
+For the creation of a Complete Binary Tree, we require a queue data structure to keep track of the inserted nodes.
+
+Step 1: Initialize the root with a new node when the tree is empty.
+
+Step 2: If the tree is not empty then get the front element 
+
+If the front element does not have a left child then set the left child to a new node
+If the right child is not present set the right child as a new node
+Step 3: If the node has both the children then pop it from the queue.
+
+Step 4: Enqueue the new data.
+
+Consider the below array:
+
+1. The 1st element will the root (value at index = 0)
+[A|B|D|E|F|G]
+
+A is taken as root
+                A
+
+2. The next element (at index = 1) will be left and third element (index = 2) will be right child of root
+[A|B|D|E|F|G]
+
+
+B as left child and D as right child
+
+                    A
+                   / \
+                  B   D
+
+3. fourth (index = 3) and fifth element (index = 4) will be the left and right child of B node
+[A|B|D|E|F|G]
+
+
+E and F are left and right child of B
+
+                    A
+                   / \
+                  B   D
+                 / \
+                E   F
+
+
+4. Next element (index = 5) will be left child of the node D
+[A|B|D|E|F|G]
+
+
+G is made left child of D node
+                    A
+                   / \
+                  B   D
+                 / \  /
+                E   F G
+ 
+This is how complete binary tree is created.
+
+*Application of the Complete binary tree:*
+Heap Sort
+Heap sort-based data structure
+
+
+### Perfect Binary Tree
+A perfect binary tree is a special type of binary tree in which all the leaf nodes are at the same depth, and all non-leaf nodes have two children.
+
+The maximum number of nodes in a perfect binary tree is given by the formula 2^(d+1) – 1, where d is the depth of the tree. This means that a perfect binary tree with a depth of n has 2^n leaf nodes and a total of 2^(n+1) – 1 nodes.
+
+**Properties of a Perfect Binary Tree:*
+
+Degree: The degree of a node of a tree is defined as the number of children of that node. All the internal nodes have a degree of 2. The leaf nodes of a perfect binary tree have a degree of 0.
+Number of leaf nodes: If the height of the perfect binary tree is h, then the number of leaf nodes will be 2h because the last level is completely filled.
+Depth of a node: Average depth of a node in a perfect binary tree is Θ(ln(n)).
+Relation between leaf nodes and non-leaf nodes: No. of leaf nodes = No. of non-leaf nodes +1.
+Total number of nodes: A tree of height h has total nodes = 2h+1 – 1. Each node of the tree is filled. So total number of nodes can be calculated as 20 + 21 + . . . + 2h = 2h+1 – 1.
+Height of the tree: The height of a perfect binary tree with N number of nodes = log(N + 1) – 1 = Θ(ln(n)). This can be calculated using the relation shown while calculating the total number of nodes in a perfect binary tree.
+
+Example of binary tree
+            6
+           / \
+          2   4
+         / \ / \
+        3  8 5  9
+
+### Balanced Binary Tree
+A binary tree is balanced if the height of the tree is O(Log n) where n is the number of nodes. 
+
+**A balanced binary tree is a binary tree that follows the 3 conditions:*
+The height of the left and right tree for any node does not differ by more than 1.
+The left subtree of that node is also balanced.
+The right subtree of that node is also balanced.    
+
+### ON THE BASIS OF NODE VALUES
+
+## Binary search tree
+A Binary Search Tree is a data structure used in computer science for organizing and storing data in a sorted manner. Each node in a Binary Search Tree has at most two children, a left child and a right child, with the left child containing values less than the parent node and the right child containing values greater than the parent node. This hierarchical structure allows for efficient searching, insertion, and deletion operations on the data stored in the tree.
+
+**Properties of Binary Search Tree:*
+The left subtree of a node contains only nodes with keys lesser than the node’s key.
+The right subtree of a node contains only nodes with keys greater than the node’s key.
+This means everything to the left of the root is less than the value of the root and everything to the right of the root is greater than the value of the root. Due to this performing, a binary search is very easy.
+The left and right subtree each must also be a binary search tree.  
+There must be no duplicate nodes(BST may have duplicate values with different handling approaches)
+
+**Basic Operations on Binary Search Tree*
+1. Searching a node in BST:
+Searching in BST means to locate a specific node in the data structure. In Binary search tree, searching a node is easy because of its a specific order. The steps of searching a node in Binary Search tree are listed as follows –
+
+First, compare the element to be searched with the root element of the tree.
+If root is matched with the target element, then return the node’s location.
+If it is not matched, then check whether the item is less than the root element, if it is smaller than the root element, then move to the left subtree.
+If it is larger than the root element, then move to the right subtree.
+Repeat the above procedure recursively until the match is found.
+If the element is not found or not present in the tree, then return NULL.
+
+2. Insert a node into a BST:
+A new key is always inserted at the leaf. Start searching a key from the root till a leaf node. Once a leaf node is found, the new node is added as a child of the leaf node.
+Time Complexity: O(N), where N is the number of nodes of the BST 
+Auxiliary Space: O(1) 
+
+3. Delete a Node of BST:
+It is used to delete a node with specific key from the BST and return the new BST.
+
+Different scenarios for deleting the node:
+
+Node to be deleted is the leaf node :
+Its simple you can just null it out.
+Node to be deleted has one child :
+You can just replace the node with the child node.
+Node to be deleted has two child :
+Here we have to delete the node is such a way, that the resulting tree follows the properties of a BST.  The trick is to find the inorder successor of the node. Copy contents of the inorder successor to the node, and delete the inorder successor.
+
+4. Traversal (Inorder traversal of BST) :
+In case of binary search trees (BST), Inorder traversal gives nodes in non-decreasing order. We visit the left child first, then the root, and then the right child.
+
+### Applications of BST:
+Graph algorithms: BSTs can be used to implement graph algorithms, such as in minimum spanning tree algorithms.
+Priority Queues: BSTs can be used to implement priority queues, where the element with the highest priority is at the root of the tree, and elements with lower priority are stored in the subtrees.
+Self-balancing binary search tree: BSTs can be used as a self-balancing data structures such as AVL tree and Red-black tree.
+Data storage and retrieval: BSTs can be used to store and retrieve data quickly, such as in databases, where searching for a specific record can be done in logarithmic time.
+### Advantages:
+Fast search: Searching for a specific value in a BST has an average time complexity of O(log n), where n is the number of nodes in the tree. This is much faster than searching for an element in an array or linked list, which have a time complexity of O(n) in the worst case.
+In-order traversal: BSTs can be traversed in-order, which visits the left subtree, the root, and the right subtree. This can be used to sort a dataset.
+Space efficient: BSTs are space efficient as they do not store any redundant information, unlike arrays and linked lists.
+### Disadvantages:
+Skewed trees: If a tree becomes skewed, the time complexity of search, insertion, and deletion operations will be O(n) instead of O(log n), which can make the tree inefficient.
+Additional time required: Self-balancing trees require additional time to maintain balance during insertion and deletion operations.
+Efficiency: BSTs are not efficient for datasets with many duplicates as they will waste space.
+
+### AVL TREE
+An AVL tree defined as a self-balancing Binary Search Tree (BST) where the difference between heights of left and right subtrees for any node cannot be more than one.
+Operations on an AVL Tree:
+Insertion
+Deletion
+Searching [It is similar to performing a search in BST]
+
+### Rotating the subtrees in an AVL Tree:
+An AVL tree may rotate in one of the following four ways to keep itself balanced:
+
+**Left Rotation:*
+
+When a node is added into the right subtree of the right subtree, if the tree gets out of balance, we do a single left rotation.
+
+**Right Rotation:*
+
+If a node is added to the left subtree of the left subtree, the AVL tree may get out of balance, we do a single right rotation.
+
+**Left-Right Rotation:*
+
+A left-right rotation is a combination in which first left rotation takes place after that right rotation executes.
+Right-Left Rotation:
+
+A right-left rotation is a combination in which first right rotation takes place after that left rotation executes.
+
+### Applications of AVL Tree:
+It is used to index huge records in a database and also to efficiently search in that.
+For all types of in-memory collections, including sets and dictionaries, AVL Trees are used.
+Database applications, where insertions and deletions are less common but frequent data lookups are necessary
+Software that needs optimized search.
+It is applied in corporate areas and storyline games.
+### Advantages of AVL Tree:
+AVL trees can self-balance themselves.
+It is surely not skewed.
+It provides faster lookups than Red-Black Trees
+Better searching time complexity compared to other trees like binary tree.
+Height cannot exceed log(N), where, N is the total number of nodes in the tree.
+### Disadvantages of AVL Tree:
+It is difficult to implement.
+It has high constant factors for some of the operations.
+Less used compared to Red-Black trees.
+Due to its rather strict balance, AVL trees provide complicated insertion and removal operations as more rotations are performed.
+Take more processing for balancing.
