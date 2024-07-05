@@ -1,0 +1,95 @@
+What is Data Structures?
+- It is a way to organize data into the memory
+- After organizing Data it become very easy to process data 
+- It reduce the time and efforts.
+TYPES OF DATA STRUCTURES
+1. Linear data: data elements in sequensital manner 
+                so that each memebr is connectd to next and the previus element and make the traversals easy as it is a single level
+                easy to implement 
+                examples: array, linked list, stack, queue
+2. Non-linear: data elements are not in        
+                sequence manner they are connect through differnt paths
+                they stored in multilevel 
+                traversal it bit tricky and complex and takes more time.
+                not easy to implement 
+                The major examples tree and graph
+
+Introduction To ALGORITHMS
+
+An algortihm is a set of instructions to perform a task and solve a given problem using proper procedure
+Example: recipe book which contains the different food recipes with proper procedure and each step is a part of algorithm.
+
+lets a take a example
+problem: Print the average of 3 given numbers 
+the algorithms goes as follows:
+- 1 perfrom the sum of all three numbers
+- 2 store it in the variable called "sum"
+- 3 divide the sum by 3
+- 4 store the value in the variable called "avg"
+- 5 print the value stored in the avg
+
+
+CODE:
+public static void main(String args[])
+{
+int a; 
+int b;
+int c;
+
+int sum = a+b+c;
+int avg =sum/3;
+
+System.out.println(avg);
+}
+
+
+ANALYSIS OF ALGORITHMS
+
+There are several differnt algorithms to solve the given single problem
+Analysis of algorithm deals in finding nest algorithms whihc runs fast and takes in less memory.
+Analysis of algorithms will give you the best solution to the problem which is efficient in terms of time and memory.
+
+lets take a example:
+find the sum of the first n natural numbers
+natural numbers: 1,2,3,4......
+
+let say input n=4
+output will be : 1+2+3+4= 10 
+lets take another input n= 8
+ouput will be: 1+2+3+4+5+6+7+8 = 29
+
+lets assume these two algorithms that can solve this problem 
+
+Approach 1
+public int findSum(int n){
+    return n*(n+1)/2;
+
+}
+
+EXPLANATION: here we have taken a variable from the user which will decide that upto which the number the system need to work. once the input is taken then it will return the value after perfroming the calculation 
+
+Approach 2
+
+public int findSum( int n ){
+    int sum =0;
+    for (int i=1; i<=n;i++){
+        sum=+i;
+
+    }
+    return sum; 
+}
+
+EXPLANATION: fist we have taken a varibale n which contains the user input of the number upto which he/she wants the sum and then another variable called as sum which iniated with 0 value and started a for loop in which i variable is declared whcose initial value is 1 and the maximum value will be less than and equals to n and after each loop it will increment after checking the conditions. 
+and perfrom the sum operation and store that value in sum variable and continuned the loop until the value of i=n
+
+Now lest analyse the algorithm to cnfrim that which algortihm is best to work with 
+the two metric that need to be checked are the
+- Time 
+- Memory 
+
+TIME COMPLEXITY: the time taken by the algorithm to solve the problem as the name specified 
+
+SPACE COMPLEXITY: the memeory used by the algorithm to solve the problem. 
+
+
+
