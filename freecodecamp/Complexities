@@ -1,0 +1,65 @@
+TIME COMPLEXITY 
+
+- Its amount of the time taken by algortihm to run
+- The input processed by an algorithm helps in  determining the time complexity 
+
+Lets disscuss with the two previous exmaples 
+
+find the sum of the first n natural numbers
+natural numbers: 1,2,3,4......
+
+let say input n=4
+output will be : 1+2+3+4= 10 
+lets take another input n= 8
+ouput will be: 1+2+3+4+5+6+7+8 = 29
+
+lets assume these two algorithms that can solve this problem 
+
+Approach 1
+public int findSum(int n){
+    return n*(n+1)/2;
+
+}
+
+EXPLANATION: the calcualtion is using maths formula to get the result. as it return the direct result
+
+""Time Taken by Approch 10.0millisecs""
+
+
+Approach 2
+
+public int findSum( int n ){
+    int sum =0;
+    for (int i=1; i<=n;i++){
+        sum=+i;
+
+    }
+    return sum; 
+}
+
+EXPLANATION: here we are using the for loop which clearly states that as the value of n increses the for loop will run n+1 times to get the final results 
+
+""Time Taken by Approch 10.0millisecs""
+
+on comparing both it is clearly seen that the approach 1 will take less time than the approach 2 in which we used the for loop. 
+
+* depends on machine to machine 
+
+
+SPACE COMPLEXITY 
+
+- It is amount of memory or space taken by and algortihm to run 
+- The memeory required to process the input by an algorithms helps in determining the space complexity 
+
+Types
+Notations that deals with the time and the space complexitites to provide proper understanding rather than going and checking the exact numbers in terms of time and space
+
+ASYMPTOTIC ANALYTICS OF AN ALGORITHMS
+- Its helps in evaluating perfromace of an algorithm in terms of input size and its increase.
+- Using the asymptotic analysis we do not measure the actual running time of the algorithm
+- It helps in determining how time and space by the algorithm increases with the input size. 
+
+
+
+
+
