@@ -1,0 +1,25 @@
+Notations that deals with the time and the space complexitites to provide proper understanding rather than going and checking the exact numbers in terms of time and space
+
+ASYMPTOTIC ANALYTICS OF AN ALGORITHMS
+- Its helps in evaluating perfromace of an algorithm in terms of input size and its increase.
+- Using the asymptotic analysis we do not measure the actual running time of the algorithm
+- It helps in determining how time and space by the algorithm increases with the input size. 
+
+ ASYMPTOTIC NOTATIONS 
+
+ - Asymptotics notation are the mathematical tools used to calculate the running time of an algorithm in terms of input size.
+
+ Example: performance of car in 1 liter of petrol 
+
+ in differnt situation the perfromace matrix and the output will chnage 
+ such as 
+ on highway - 25km/liter
+ city- 15 km/ liter
+ highway+city - 20 km/liter
+
+
+Similary asymptotic notations give us differnt scenario in which an algorithm perfrom 
+- Best case
+- Average case
+- Worst case
+

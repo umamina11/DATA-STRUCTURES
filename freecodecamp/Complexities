@@ -51,13 +51,8 @@ SPACE COMPLEXITY
 - It is amount of memory or space taken by and algortihm to run 
 - The memeory required to process the input by an algorithms helps in determining the space complexity 
 
-Types
-Notations that deals with the time and the space complexitites to provide proper understanding rather than going and checking the exact numbers in terms of time and space
 
-ASYMPTOTIC ANALYTICS OF AN ALGORITHMS
-- Its helps in evaluating perfromace of an algorithm in terms of input size and its increase.
-- Using the asymptotic analysis we do not measure the actual running time of the algorithm
-- It helps in determining how time and space by the algorithm increases with the input size. 
+
 
 
 
