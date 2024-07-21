@@ -23,3 +23,27 @@ Similary asymptotic notations give us differnt scenario in which an algorithm pe
 - Average case
 - Worst case
 
+
+The three notations perfroming runtim analysis of an algorithm
+- omega notation 
+- big O notation
+- Theta notation  
+
+
+OMEGA NOTATION
+-It is the formal way to express the lower bound of an algorithm's running time.
+-Lower bound means for any given input this notation deterines the best amount of time an algorithm can take to complete the task. 
+
+-provide the lower time range a algorithm takes to work 
+- least used notation as we are looking for the worst case and reduce that 
+
+BIG O NOTATION
+
+It is the formal way to express the upper bound of an algorithm's running time 
+- Upper bound means for any given input this notation detremines longest amount of time an algorithm can take to complete 
+-the highest time range limit that an algorithm takes 
+-a developer always look at 
+
+THETA NOTATION 
+It express the formal way to express both th upper and the lower bound of an algorithm's running time. 
+By lower and upper bound means for any given input this notation determines 
