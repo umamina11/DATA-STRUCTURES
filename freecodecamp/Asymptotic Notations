@@ -46,4 +46,44 @@ It is the formal way to express the upper bound of an algorithm's running time
 
 THETA NOTATION 
 It express the formal way to express both th upper and the lower bound of an algorithm's running time. 
-By lower and upper bound means for any given input this notation determines 
+By lower and upper bound means for any given input this notation determines the average amount of time a algorithm needs to complete a task 
+
+
+ANALYSIS OF TIME COMPLEXITY
+- rules and asumption while computing the big O notation
+
+understand it with a simple example 
+assume a single processsor 
+it perfroms sequential execution statement 
+assignemnt operation takes one unit of time and return the statement takes one unit of time
+arthimitical operation takes one unit of time and the logical operation will take one unit of time.
+this will give us a quadratic equation
+
+    T= n^2 +3n +1 ==> O(n^2)       --- here we droped th lowere order terms along with the we also droped the multiplers  get the highest power value and get the time complexity 
+
+Calculating the time complexity of a constant algorithm
+
+simple algorithm
+
+public int sum(int x, int y){           ---line 1
+    int result= x+y;                    ---line 2
+    return result;                      ---line 3
+}                                       ---line 4
+
+as here in line 2 we are perfroming the 4 differnt operations 
+1st assigning the x value
+2nd assigning the y value
+3rd adding them 
+4th storing the result  the result variable 
+
+
+in line 3 we are performing the two operation 
+that are just using the return function to assess the result variable and then providing the result
+
+so the time will be 
+T= 1+1+1+1+1+1 = 6 (which is a constant)
+
+another example
+public int get(int[] arr, int i){
+    return arra
+}
